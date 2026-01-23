@@ -3293,3 +3293,91 @@ section {
         100% { transform: translate(-50%, -50%) rotate(360deg) translateX(60px); }
     }
 }
+
+/* ============================================
+   MOBILE RESPONSIVE FIXES - FINAL OVERRIDES
+   ============================================ */
+
+/* 手机端修复：三个卡片垂直排列 + 数据不超出容器 */
+@media (max-width: 768px) {
+    /* Philosophy section 三个卡片垂直排列 */
+    .philosophy-cards-row {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Dictionary section 三个卡片垂直排列 */
+    .dictionary-links {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Codebook section 三个卡片垂直排列 */
+    .codebook-links {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* About section 数据统计不超出容器 */
+    .project-stats {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .stat {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 16px !important;
+        overflow: hidden !important;
+    }
+
+    .stat-number {
+        font-size: 32px !important;
+        word-break: break-word !important;
+    }
+
+    .stat-label {
+        font-size: 12px !important;
+        word-break: break-word !important;
+        line-height: 1.4 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 更小屏幕的额外调整 */
+    .philosophy-cards-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .dictionary-links {
+        grid-template-columns: 1fr !important;
+    }
+
+    .codebook-links {
+        grid-template-columns: 1fr !important;
+    }
+
+    .project-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .stat {
+        padding: 16px 12px !important;
+    }
+
+    .stat-number {
+        font-size: 28px !important;
+    }
+
+    .stat-label {
+        font-size: 11px !important;
+    }
+}
