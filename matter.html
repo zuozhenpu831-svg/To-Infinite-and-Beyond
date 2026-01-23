@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matter Dictionary | 物质词典 - To Infinite and Beyond</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="starfield" id="starfield"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-symbol">∞</span>
+                    <span class="logo-text">To Infinite and Beyond</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home <span class="nav-chinese">首页</span></a></li>
+                <li class="nav-item"><a href="index.html#dictionary" class="nav-link active">Dictionary <span class="nav-chinese">词典</span></a></li>
+                <li class="nav-item"><a href="index.html#codebook" class="nav-link">Codebook <span class="nav-chinese">密码本</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="subpage-hero">
+        <div class="container">
+            <a href="index.html#dictionary" class="back-link">← Back to Dictionary</a>
+            <h1>Matter Dictionary</h1>
+            <p class="cn-title">物质词典</p>
+            <p class="intro">
+                All matter in the universe is built from the same fundamental particles.
+                These symbols (0.2x) describe the building blocks of reality — from electrons to atoms to ions.
+                <span class="cn">
+                    宇宙中的所有物质都由相同的基本粒子构成。这些符号(0.2x)描述了现实的基本构件——从电子到原子再到离子。
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="symbol-table">
+        <div class="container">
+            <!-- Fundamental Particles -->
+            <div class="symbol-category">
+                <h3>Fundamental Particles</h3>
+                <p class="cn-subtitle">基本粒子</p>
+                <div class="symbol-list">
+                    <div class="symbol-item">
+                        <span class="code">0.20</span>
+                        <div class="meaning">Matter / Particle<span class="cn">物质/粒子</span></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">0.21</span>
+                        <div class="meaning">Electron (e⁻)<span class="cn">电子</span></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">0.22</span>
+                        <div class="meaning">Proton (p)<span class="cn">质子</span></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">0.23</span>
+                        <div class="meaning">Neutron (n)<span class="cn">中子</span></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">0.24</span>
+                        <div class="meaning">Neutrino (νₑ)<span class="cn">中微子</span></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">0.25</span>
+                        <div class="meaning">Positron (e⁺)<span class="cn">正电子</span></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">0.26</span>
+                        <div class="meaning">Photon (γ)<span class="cn">光子</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Express Atoms -->
+            <div class="symbol-category">
+                <h3>Expressing Atoms</h3>
+                <p class="cn-subtitle">原子表达方式</p>
+                <div class="codebook-entry" style="margin-top: 24px;">
+                    <h4>Structure: <span class="symbol-badge">0.2 + 0.21 + electrons + 0.22 + protons + 0.23 + neutrons</span></h4>
+                    <div class="codebook-sequence">
+                        <div class="sequence-line">
+                            <code>0.2 0.5 0.21 0.5 [electron count] 0.5 0.22 0.5 [proton count] 0.5 0.23 0.5 [neutron count] 0.5 0.9</code>
+                            <p class="translation">Matter, electrons=[n], protons=[n], neutrons=[n].</p>
+                        </div>
+                    </div>
+                    <div class="codebook-explanation">
+                        Any neutral atom has equal electrons and protons. The proton count (atomic number) uniquely identifies the element.
+                        <span class="cn">任何中性原子的电子数和质子数相等。质子数（原子序数）唯一确定元素。</span>
+                    </div>
+                </div>
+
+                <!-- Example Atoms -->
+                <h4 style="margin-top: 32px; margin-bottom: 16px;">Examples 示例</h4>
+                <div class="symbol-list">
+                    <div class="symbol-item">
+                        <span class="code">H</span>
+                        <div class="meaning">Hydrogen 氢 (1p, 1e, 0n)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 1 0.5 0.22 0.5 1 0.5 0.23 0.5 0 0.5 0.9</code></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">He</span>
+                        <div class="meaning">Helium 氦 (2p, 2e, 2n)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 10 0.5 0.22 0.5 10 0.5 0.23 0.5 10 0.5 0.9</code></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">C</span>
+                        <div class="meaning">Carbon 碳 (6p, 6e, 6n)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 110 0.5 0.22 0.5 110 0.5 0.23 0.5 110 0.5 0.9</code></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">O</span>
+                        <div class="meaning">Oxygen 氧 (8p, 8e, 8n)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 1000 0.5 0.22 0.5 1000 0.5 0.23 0.5 1000 0.5 0.9</code></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">Fe</span>
+                        <div class="meaning">Iron 铁 (26p, 26e, 30n)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 11010 0.5 0.22 0.5 11010 0.5 0.23 0.5 11110 0.5 0.9</code></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">Au</span>
+                        <div class="meaning">Gold 金 (79p, 79e, 118n)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 1001111 0.5 0.22 0.5 1001111 0.5 0.23 0.5 1110110 0.5 0.9</code></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expressing Ions -->
+            <div class="symbol-category">
+                <h3>Expressing Ions</h3>
+                <p class="cn-subtitle">离子表达方式</p>
+                <div class="codebook-explanation" style="margin-bottom: 24px;">
+                    Ions have unequal electrons and protons. The difference indicates the charge. If electrons < protons, it's a positive ion (cation).
+                    <span class="cn">离子的电子数和质子数不相等。差值表示电荷。如果电子数 < 质子数，则为正离子（阳离子）。</span>
+                </div>
+                <div class="symbol-list">
+                    <div class="symbol-item">
+                        <span class="code">H⁺</span>
+                        <div class="meaning">Hydrogen Ion 氢离子 (0e, 1p)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.20 0.5 0.21 0.5 0 0.5 0.22 0.5 1 0.5 0.23 0.5 0 0.9</code></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">Na⁺</span>
+                        <div class="meaning">Sodium Ion 钠离子 (10e, 11p)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 1010 0.5 0.22 0.5 1011 0.5 0.23 0.5 1100 0.5 0.9</code></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">Cl⁻</span>
+                        <div class="meaning">Chloride Ion 氯离子 (18e, 17p)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 10010 0.5 0.22 0.5 10001 0.5 0.23 0.5 10010 0.5 0.9</code></div>
+                    </div>
+                    <div class="symbol-item">
+                        <span class="code">Ca²⁺</span>
+                        <div class="meaning">Calcium Ion 钙离子 (18e, 20p)<br>
+                        <code style="font-size: 11px; color: var(--aurora-green);">0.2 0.5 0.21 0.5 10010 0.5 0.22 0.5 10100 0.5 0.23 0.5 10100 0.5 0.9</code></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matter Codebook Link -->
+            <div class="symbol-category">
+                <h3>Matter Codebook</h3>
+                <p class="cn-subtitle">物质密码本</p>
+                <div class="codebook-explanation">
+                    See how matter symbols are combined to describe nuclear fusion reactions —
+                    the universal process powering every star, which any civilization would recognize and understand.
+                    <span class="cn">
+                        查看物质符号如何组合描述核聚变反应——驱动每颗恒星的宇宙通用过程，任何文明都能识别和理解。
+                    </span>
+                </div>
+                <a href="codebook-matter.html" class="coord-link" style="margin-top: 24px;">
+                    See Complete Matter Codebook →
+                    <span class="cn">查看完整物质密码本</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="philosophy" style="padding: 80px 0;">
+        <div class="container">
+            <div class="philosophy-quote" style="max-width: 800px; margin: 0 auto;">
+                <blockquote style="font-size: 24px;">
+                    "We are all made of star-stuff."
+                </blockquote>
+                <cite>— Carl Sagan</cite>
+                <p class="quote-reflection">
+                    Every atom in your body was forged in the heart of a dying star billions of years ago.
+                    The carbon in your cells, the iron in your blood, the calcium in your bones —
+                    all were created in stellar furnaces and scattered across the cosmos in supernova explosions.
+                    Any civilization receiving our message shares this cosmic ancestry.
+                </p>
+                <p class="quote-reflection cn">
+                    你身体中的每一个原子都是数十亿年前在垂死恒星的核心中锻造的。
+                    你细胞中的碳，你血液中的铁，你骨骼中的钙——
+                    都是在恒星熔炉中创造的，并在超新星爆炸中散布到整个宇宙。
+                    任何接收我们信息的文明都共享这一宇宙血统。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 To Infinite and Beyond. For humanity, for the cosmos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

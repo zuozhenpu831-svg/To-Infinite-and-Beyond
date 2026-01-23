@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matter Codebooks | 物质密码本 - To Infinite and Beyond</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .element-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 12px;
+            margin: 24px 0;
+        }
+        .element-item {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 13px;
+        }
+        .element-item .el-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .element-item .el-symbol {
+            font-weight: bold;
+            color: var(--aurora-green);
+            font-size: 16px;
+        }
+        .element-item .el-number {
+            color: var(--text-dim);
+            font-size: 12px;
+        }
+        .element-item .el-name {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+        .element-item code {
+            display: block;
+            font-size: 11px;
+            color: var(--aurora-blue);
+            word-break: break-all;
+            margin-top: 8px;
+            padding: 8px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 4px;
+        }
+        .period-title {
+            margin: 32px 0 16px;
+            padding: 12px 16px;
+            background: linear-gradient(90deg, rgba(100,255,218,0.1), transparent);
+            border-left: 3px solid var(--aurora-green);
+            font-size: 18px;
+        }
+        .ion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .ion-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .ion-card h5 {
+            color: var(--aurora-green);
+            margin-bottom: 12px;
+        }
+        .ion-pair {
+            margin: 8px 0;
+        }
+        .ion-pair .neutral {
+            color: var(--text-secondary);
+        }
+        .ion-pair .ion {
+            color: var(--aurora-blue);
+            margin-top: 4px;
+        }
+        .ion-pair code {
+            font-size: 11px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="starfield" id="starfield"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-symbol">∞</span>
+                    <span class="logo-text">To Infinite and Beyond</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home <span class="nav-chinese">首页</span></a></li>
+                <li class="nav-item"><a href="index.html#dictionary" class="nav-link">Dictionary <span class="nav-chinese">词典</span></a></li>
+                <li class="nav-item"><a href="index.html#codebook" class="nav-link active">Codebook <span class="nav-chinese">密码本</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="subpage-hero">
+        <div class="container">
+            <a href="index.html#codebook" class="back-link">← Back to Codebooks</a>
+            <h1>Matter Codebooks</h1>
+            <p class="cn-title">物质密码本</p>
+            <p class="intro">
+                The complete periodic table of 118 elements — the building blocks of all matter in the universe.
+                Each element is defined by its electron, proton, and neutron count.
+                <span class="cn">
+                    完整的118种元素周期表——宇宙中所有物质的基本构件。
+                    每种元素由其电子、质子和中子数量定义。
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="codebook-full">
+        <div class="container">
+            <!-- Encoding Format -->
+            <div class="codebook-section">
+                <h3>Encoding Format</h3>
+                <p class="cn-subtitle">编码格式</p>
+                <div class="codebook-entry">
+                    <h4>Atom Structure Pattern <span class="symbol-badge">0.2 + subparticles</span></h4>
+                    <p style="margin-bottom: 16px; color: var(--text-secondary);">
+                        Format: <code style="background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 4px;">0.2 0.5 0.21 0.5 [e] 0.5 0.22 0.5 [p] 0.5 0.23 0.5 [n] 0.5 0.9</code>
+                        <span class="cn" style="display: block; margin-top: 8px; color: var(--text-dim);">
+                            格式：0.2（物质）+ 0.21（电子）+ 数量 + 0.22（质子）+ 数量 + 0.23（中子）+ 数量 + 0.9（句号）
+                        </span>
+                    </p>
+                    <p style="color: var(--text-dim); font-size: 14px;">
+                        All numbers are in binary. Neutral atoms have equal electrons and protons.
+                        Neutron count corresponds to the most stable isotope.
+                        <span class="cn" style="display: block; margin-top: 4px;">
+                            所有数字均为二进制。中性原子的电子和质子数量相等。中子数对应最稳定同位素。
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Period 1 -->
+            <div class="codebook-section">
+                <h3 class="period-title">Period 1 · 第一周期</h3>
+                <div class="element-grid">
+                    <div class="element-item">
+                        <div class="el-header">
+                            <span class="el-symbol">H</span>
+                            <span class="el-number">#1</span>
+                        </div>
+                        <div class="el-name">Hydrogen 氢</div>
+                        <code>0.2 0.5 0.21 0.5 1 0.5 0.22 0.5 1 0.5 0.23 0.5 0 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header">
+                            <span class="el-symbol">He</span>
+                            <span class="el-number">#2</span>
+                        </div>
+                        <div class="el-name">Helium 氦</div>
+                        <code>0.2 0.5 0.21 0.5 10 0.5 0.22 0.5 10 0.5 0.23 0.5 10 0.5 0.9</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 2 -->
+            <div class="codebook-section">
+                <h3 class="period-title">Period 2 · 第二周期</h3>
+                <div class="element-grid">
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Li</span><span class="el-number">#3</span></div>
+                        <div class="el-name">Lithium 锂</div>
+                        <code>0.2 0.5 0.21 0.5 11 0.5 0.22 0.5 11 0.5 0.23 0.5 100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Be</span><span class="el-number">#4</span></div>
+                        <div class="el-name">Beryllium 铍</div>
+                        <code>0.2 0.5 0.21 0.5 100 0.5 0.22 0.5 100 0.5 0.23 0.5 101 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">B</span><span class="el-number">#5</span></div>
+                        <div class="el-name">Boron 硼</div>
+                        <code>0.2 0.5 0.21 0.5 101 0.5 0.22 0.5 101 0.5 0.23 0.5 110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">C</span><span class="el-number">#6</span></div>
+                        <div class="el-name">Carbon 碳</div>
+                        <code>0.2 0.5 0.21 0.5 110 0.5 0.22 0.5 110 0.5 0.23 0.5 110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">N</span><span class="el-number">#7</span></div>
+                        <div class="el-name">Nitrogen 氮</div>
+                        <code>0.2 0.5 0.21 0.5 111 0.5 0.22 0.5 111 0.5 0.23 0.5 111 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">O</span><span class="el-number">#8</span></div>
+                        <div class="el-name">Oxygen 氧</div>
+                        <code>0.2 0.5 0.21 0.5 1000 0.5 0.22 0.5 1000 0.5 0.23 0.5 1000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">F</span><span class="el-number">#9</span></div>
+                        <div class="el-name">Fluorine 氟</div>
+                        <code>0.2 0.5 0.21 0.5 1001 0.5 0.22 0.5 1001 0.5 0.23 0.5 1010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ne</span><span class="el-number">#10</span></div>
+                        <div class="el-name">Neon 氖</div>
+                        <code>0.2 0.5 0.21 0.5 1010 0.5 0.22 0.5 1010 0.5 0.23 0.5 1010 0.5 0.9</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 3 -->
+            <div class="codebook-section">
+                <h3 class="period-title">Period 3 · 第三周期</h3>
+                <div class="element-grid">
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Na</span><span class="el-number">#11</span></div>
+                        <div class="el-name">Sodium 钠</div>
+                        <code>0.2 0.5 0.21 0.5 1011 0.5 0.22 0.5 1011 0.5 0.23 0.5 1100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Mg</span><span class="el-number">#12</span></div>
+                        <div class="el-name">Magnesium 镁</div>
+                        <code>0.2 0.5 0.21 0.5 1100 0.5 0.22 0.5 1100 0.5 0.23 0.5 1100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Al</span><span class="el-number">#13</span></div>
+                        <div class="el-name">Aluminum 铝</div>
+                        <code>0.2 0.5 0.21 0.5 1101 0.5 0.22 0.5 1101 0.5 0.23 0.5 1110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Si</span><span class="el-number">#14</span></div>
+                        <div class="el-name">Silicon 硅</div>
+                        <code>0.2 0.5 0.21 0.5 1110 0.5 0.22 0.5 1110 0.5 0.23 0.5 1110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">P</span><span class="el-number">#15</span></div>
+                        <div class="el-name">Phosphorus 磷</div>
+                        <code>0.2 0.5 0.21 0.5 1111 0.5 0.22 0.5 1111 0.5 0.23 0.5 10000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">S</span><span class="el-number">#16</span></div>
+                        <div class="el-name">Sulfur 硫</div>
+                        <code>0.2 0.5 0.21 0.5 10000 0.5 0.22 0.5 10000 0.5 0.23 0.5 10000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Cl</span><span class="el-number">#17</span></div>
+                        <div class="el-name">Chlorine 氯</div>
+                        <code>0.2 0.5 0.21 0.5 10001 0.5 0.22 0.5 10001 0.5 0.23 0.5 10010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ar</span><span class="el-number">#18</span></div>
+                        <div class="el-name">Argon 氩</div>
+                        <code>0.2 0.5 0.21 0.5 10010 0.5 0.22 0.5 10010 0.5 0.23 0.5 10110 0.5 0.9</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 4 -->
+            <div class="codebook-section">
+                <h3 class="period-title">Period 4 · 第四周期</h3>
+                <div class="element-grid">
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">K</span><span class="el-number">#19</span></div>
+                        <div class="el-name">Potassium 钾</div>
+                        <code>0.2 0.5 0.21 0.5 10011 0.5 0.22 0.5 10011 0.5 0.23 0.5 10100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ca</span><span class="el-number">#20</span></div>
+                        <div class="el-name">Calcium 钙</div>
+                        <code>0.2 0.5 0.21 0.5 10100 0.5 0.22 0.5 10100 0.5 0.23 0.5 10100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Sc</span><span class="el-number">#21</span></div>
+                        <div class="el-name">Scandium 钪</div>
+                        <code>0.2 0.5 0.21 0.5 10101 0.5 0.22 0.5 10101 0.5 0.23 0.5 11000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ti</span><span class="el-number">#22</span></div>
+                        <div class="el-name">Titanium 钛</div>
+                        <code>0.2 0.5 0.21 0.5 10110 0.5 0.22 0.5 10110 0.5 0.23 0.5 11010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">V</span><span class="el-number">#23</span></div>
+                        <div class="el-name">Vanadium 钒</div>
+                        <code>0.2 0.5 0.21 0.5 10111 0.5 0.22 0.5 10111 0.5 0.23 0.5 11100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Cr</span><span class="el-number">#24</span></div>
+                        <div class="el-name">Chromium 铬</div>
+                        <code>0.2 0.5 0.21 0.5 11000 0.5 0.22 0.5 11000 0.5 0.23 0.5 11100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Mn</span><span class="el-number">#25</span></div>
+                        <div class="el-name">Manganese 锰</div>
+                        <code>0.2 0.5 0.21 0.5 11001 0.5 0.22 0.5 11001 0.5 0.23 0.5 11110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Fe</span><span class="el-number">#26</span></div>
+                        <div class="el-name">Iron 铁</div>
+                        <code>0.2 0.5 0.21 0.5 11010 0.5 0.22 0.5 11010 0.5 0.23 0.5 11110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Co</span><span class="el-number">#27</span></div>
+                        <div class="el-name">Cobalt 钴</div>
+                        <code>0.2 0.5 0.21 0.5 11011 0.5 0.22 0.5 11011 0.5 0.23 0.5 100000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ni</span><span class="el-number">#28</span></div>
+                        <div class="el-name">Nickel 镍</div>
+                        <code>0.2 0.5 0.21 0.5 11100 0.5 0.22 0.5 11100 0.5 0.23 0.5 11110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Cu</span><span class="el-number">#29</span></div>
+                        <div class="el-name">Copper 铜</div>
+                        <code>0.2 0.5 0.21 0.5 11101 0.5 0.22 0.5 11101 0.5 0.23 0.5 100010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Zn</span><span class="el-number">#30</span></div>
+                        <div class="el-name">Zinc 锌</div>
+                        <code>0.2 0.5 0.21 0.5 11110 0.5 0.22 0.5 11110 0.5 0.23 0.5 100010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ga</span><span class="el-number">#31</span></div>
+                        <div class="el-name">Gallium 镓</div>
+                        <code>0.2 0.5 0.21 0.5 11111 0.5 0.22 0.5 11111 0.5 0.23 0.5 100110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ge</span><span class="el-number">#32</span></div>
+                        <div class="el-name">Germanium 锗</div>
+                        <code>0.2 0.5 0.21 0.5 100000 0.5 0.22 0.5 100000 0.5 0.23 0.5 101010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">As</span><span class="el-number">#33</span></div>
+                        <div class="el-name">Arsenic 砷</div>
+                        <code>0.2 0.5 0.21 0.5 100001 0.5 0.22 0.5 100001 0.5 0.23 0.5 101010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Se</span><span class="el-number">#34</span></div>
+                        <div class="el-name">Selenium 硒</div>
+                        <code>0.2 0.5 0.21 0.5 100010 0.5 0.22 0.5 100010 0.5 0.23 0.5 101110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Br</span><span class="el-number">#35</span></div>
+                        <div class="el-name">Bromine 溴</div>
+                        <code>0.2 0.5 0.21 0.5 100011 0.5 0.22 0.5 100011 0.5 0.23 0.5 101100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Kr</span><span class="el-number">#36</span></div>
+                        <div class="el-name">Krypton 氪</div>
+                        <code>0.2 0.5 0.21 0.5 100100 0.5 0.22 0.5 100100 0.5 0.23 0.5 110000 0.5 0.9</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 5 -->
+            <div class="codebook-section">
+                <h3 class="period-title">Period 5 · 第五周期</h3>
+                <div class="element-grid">
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Rb</span><span class="el-number">#37</span></div>
+                        <div class="el-name">Rubidium 铷</div>
+                        <code>0.2 0.5 0.21 0.5 100101 0.5 0.22 0.5 100101 0.5 0.23 0.5 110000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Sr</span><span class="el-number">#38</span></div>
+                        <div class="el-name">Strontium 锶</div>
+                        <code>0.2 0.5 0.21 0.5 100110 0.5 0.22 0.5 100110 0.5 0.23 0.5 110010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Y</span><span class="el-number">#39</span></div>
+                        <div class="el-name">Yttrium 钇</div>
+                        <code>0.2 0.5 0.21 0.5 100111 0.5 0.22 0.5 100111 0.5 0.23 0.5 110010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Zr</span><span class="el-number">#40</span></div>
+                        <div class="el-name">Zirconium 锆</div>
+                        <code>0.2 0.5 0.21 0.5 101000 0.5 0.22 0.5 101000 0.5 0.23 0.5 110011 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Nb</span><span class="el-number">#41</span></div>
+                        <div class="el-name">Niobium 铌</div>
+                        <code>0.2 0.5 0.21 0.5 101001 0.5 0.22 0.5 101001 0.5 0.23 0.5 110100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Mo</span><span class="el-number">#42</span></div>
+                        <div class="el-name">Molybdenum 钼</div>
+                        <code>0.2 0.5 0.21 0.5 101010 0.5 0.22 0.5 101010 0.5 0.23 0.5 110110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Tc</span><span class="el-number">#43</span></div>
+                        <div class="el-name">Technetium 锝</div>
+                        <code>0.2 0.5 0.21 0.5 101011 0.5 0.22 0.5 101011 0.5 0.23 0.5 110111 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ru</span><span class="el-number">#44</span></div>
+                        <div class="el-name">Ruthenium 钌</div>
+                        <code>0.2 0.5 0.21 0.5 101100 0.5 0.22 0.5 101100 0.5 0.23 0.5 111000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Rh</span><span class="el-number">#45</span></div>
+                        <div class="el-name">Rhodium 铑</div>
+                        <code>0.2 0.5 0.21 0.5 101101 0.5 0.22 0.5 101101 0.5 0.23 0.5 111010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Pd</span><span class="el-number">#46</span></div>
+                        <div class="el-name">Palladium 钯</div>
+                        <code>0.2 0.5 0.21 0.5 101110 0.5 0.22 0.5 101110 0.5 0.23 0.5 111100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ag</span><span class="el-number">#47</span></div>
+                        <div class="el-name">Silver 银</div>
+                        <code>0.2 0.5 0.21 0.5 101111 0.5 0.22 0.5 101111 0.5 0.23 0.5 111100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Cd</span><span class="el-number">#48</span></div>
+                        <div class="el-name">Cadmium 镉</div>
+                        <code>0.2 0.5 0.21 0.5 110000 0.5 0.22 0.5 110000 0.5 0.23 0.5 1000000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">In</span><span class="el-number">#49</span></div>
+                        <div class="el-name">Indium 铟</div>
+                        <code>0.2 0.5 0.21 0.5 110001 0.5 0.22 0.5 110001 0.5 0.23 0.5 1000010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Sn</span><span class="el-number">#50</span></div>
+                        <div class="el-name">Tin 锡</div>
+                        <code>0.2 0.5 0.21 0.5 110010 0.5 0.22 0.5 110010 0.5 0.23 0.5 1000110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Sb</span><span class="el-number">#51</span></div>
+                        <div class="el-name">Antimony 锑</div>
+                        <code>0.2 0.5 0.21 0.5 110011 0.5 0.22 0.5 110011 0.5 0.23 0.5 1001000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Te</span><span class="el-number">#52</span></div>
+                        <div class="el-name">Tellurium 碲</div>
+                        <code>0.2 0.5 0.21 0.5 110100 0.5 0.22 0.5 110100 0.5 0.23 0.5 1001110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">I</span><span class="el-number">#53</span></div>
+                        <div class="el-name">Iodine 碘</div>
+                        <code>0.2 0.5 0.21 0.5 110101 0.5 0.22 0.5 110101 0.5 0.23 0.5 1001010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Xe</span><span class="el-number">#54</span></div>
+                        <div class="el-name">Xenon 氙</div>
+                        <code>0.2 0.5 0.21 0.5 110110 0.5 0.22 0.5 110110 0.5 0.23 0.5 1001101 0.5 0.9</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 6 -->
+            <div class="codebook-section">
+                <h3 class="period-title">Period 6 · 第六周期</h3>
+                <div class="element-grid">
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Cs</span><span class="el-number">#55</span></div>
+                        <div class="el-name">Cesium 铯</div>
+                        <code>0.2 0.5 0.21 0.5 110111 0.5 0.22 0.5 110111 0.5 0.23 0.5 1001110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ba</span><span class="el-number">#56</span></div>
+                        <div class="el-name">Barium 钡</div>
+                        <code>0.2 0.5 0.21 0.5 111000 0.5 0.22 0.5 111000 0.5 0.23 0.5 1010001 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">La</span><span class="el-number">#57</span></div>
+                        <div class="el-name">Lanthanum 镧</div>
+                        <code>0.2 0.5 0.21 0.5 111001 0.5 0.22 0.5 111001 0.5 0.23 0.5 1010010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ce</span><span class="el-number">#58</span></div>
+                        <div class="el-name">Cerium 铈</div>
+                        <code>0.2 0.5 0.21 0.5 111010 0.5 0.22 0.5 111010 0.5 0.23 0.5 1010010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Pr</span><span class="el-number">#59</span></div>
+                        <div class="el-name">Praseodymium 镨</div>
+                        <code>0.2 0.5 0.21 0.5 111011 0.5 0.22 0.5 111011 0.5 0.23 0.5 1010010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Nd</span><span class="el-number">#60</span></div>
+                        <div class="el-name">Neodymium 钕</div>
+                        <code>0.2 0.5 0.21 0.5 111100 0.5 0.22 0.5 111100 0.5 0.23 0.5 1010100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Pm</span><span class="el-number">#61</span></div>
+                        <div class="el-name">Promethium 钷</div>
+                        <code>0.2 0.5 0.21 0.5 111101 0.5 0.22 0.5 111101 0.5 0.23 0.5 1010100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Sm</span><span class="el-number">#62</span></div>
+                        <div class="el-name">Samarium 钐</div>
+                        <code>0.2 0.5 0.21 0.5 111110 0.5 0.22 0.5 111110 0.5 0.23 0.5 1011000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Eu</span><span class="el-number">#63</span></div>
+                        <div class="el-name">Europium 铕</div>
+                        <code>0.2 0.5 0.21 0.5 111111 0.5 0.22 0.5 111111 0.5 0.23 0.5 1011001 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Gd</span><span class="el-number">#64</span></div>
+                        <div class="el-name">Gadolinium 钆</div>
+                        <code>0.2 0.5 0.21 0.5 1000000 0.5 0.22 0.5 1000000 0.5 0.23 0.5 1011101 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Tb</span><span class="el-number">#65</span></div>
+                        <div class="el-name">Terbium 铽</div>
+                        <code>0.2 0.5 0.21 0.5 1000001 0.5 0.22 0.5 1000001 0.5 0.23 0.5 1011100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Dy</span><span class="el-number">#66</span></div>
+                        <div class="el-name">Dysprosium 镝</div>
+                        <code>0.2 0.5 0.21 0.5 1000010 0.5 0.22 0.5 1000010 0.5 0.23 0.5 1100001 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ho</span><span class="el-number">#67</span></div>
+                        <div class="el-name">Holmium 钬</div>
+                        <code>0.2 0.5 0.21 0.5 1000011 0.5 0.22 0.5 1000011 0.5 0.23 0.5 1100010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Er</span><span class="el-number">#68</span></div>
+                        <div class="el-name">Erbium 铒</div>
+                        <code>0.2 0.5 0.21 0.5 1000100 0.5 0.22 0.5 1000100 0.5 0.23 0.5 1100010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Tm</span><span class="el-number">#69</span></div>
+                        <div class="el-name">Thulium 铥</div>
+                        <code>0.2 0.5 0.21 0.5 1000101 0.5 0.22 0.5 1000101 0.5 0.23 0.5 1100100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Yb</span><span class="el-number">#70</span></div>
+                        <div class="el-name">Ytterbium 镱</div>
+                        <code>0.2 0.5 0.21 0.5 1000110 0.5 0.22 0.5 1000110 0.5 0.23 0.5 1100111 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Lu</span><span class="el-number">#71</span></div>
+                        <div class="el-name">Lutetium 镥</div>
+                        <code>0.2 0.5 0.21 0.5 1000111 0.5 0.22 0.5 1000111 0.5 0.23 0.5 1101001 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Hf</span><span class="el-number">#72</span></div>
+                        <div class="el-name">Hafnium 铪</div>
+                        <code>0.2 0.5 0.21 0.5 1001000 0.5 0.22 0.5 1001000 0.5 0.23 0.5 1101110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ta</span><span class="el-number">#73</span></div>
+                        <div class="el-name">Tantalum 钽</div>
+                        <code>0.2 0.5 0.21 0.5 1001001 0.5 0.22 0.5 1001001 0.5 0.23 0.5 1101111 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">W</span><span class="el-number">#74</span></div>
+                        <div class="el-name">Tungsten 钨</div>
+                        <code>0.2 0.5 0.21 0.5 1001010 0.5 0.22 0.5 1001010 0.5 0.23 0.5 1110000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Re</span><span class="el-number">#75</span></div>
+                        <div class="el-name">Rhenium 铼</div>
+                        <code>0.2 0.5 0.21 0.5 1001011 0.5 0.22 0.5 1001011 0.5 0.23 0.5 1110000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Os</span><span class="el-number">#76</span></div>
+                        <div class="el-name">Osmium 锇</div>
+                        <code>0.2 0.5 0.21 0.5 1001100 0.5 0.22 0.5 1001100 0.5 0.23 0.5 1110010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ir</span><span class="el-number">#77</span></div>
+                        <div class="el-name">Iridium 铱</div>
+                        <code>0.2 0.5 0.21 0.5 1001101 0.5 0.22 0.5 1001101 0.5 0.23 0.5 1110011 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Pt</span><span class="el-number">#78</span></div>
+                        <div class="el-name">Platinum 铂</div>
+                        <code>0.2 0.5 0.21 0.5 1001110 0.5 0.22 0.5 1001110 0.5 0.23 0.5 1110101 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Au</span><span class="el-number">#79</span></div>
+                        <div class="el-name">Gold 金</div>
+                        <code>0.2 0.5 0.21 0.5 1001111 0.5 0.22 0.5 1001111 0.5 0.23 0.5 1110110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Hg</span><span class="el-number">#80</span></div>
+                        <div class="el-name">Mercury 汞</div>
+                        <code>0.2 0.5 0.21 0.5 1010000 0.5 0.22 0.5 1010000 0.5 0.23 0.5 1111000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Tl</span><span class="el-number">#81</span></div>
+                        <div class="el-name">Thallium 铊</div>
+                        <code>0.2 0.5 0.21 0.5 1010001 0.5 0.22 0.5 1010001 0.5 0.23 0.5 1111100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Pb</span><span class="el-number">#82</span></div>
+                        <div class="el-name">Lead 铅</div>
+                        <code>0.2 0.5 0.21 0.5 1010010 0.5 0.22 0.5 1010010 0.5 0.23 0.5 1111110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Bi</span><span class="el-number">#83</span></div>
+                        <div class="el-name">Bismuth 铋</div>
+                        <code>0.2 0.5 0.21 0.5 1010011 0.5 0.22 0.5 1010011 0.5 0.23 0.5 1111110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Po</span><span class="el-number">#84</span></div>
+                        <div class="el-name">Polonium 钋</div>
+                        <code>0.2 0.5 0.21 0.5 1010100 0.5 0.22 0.5 1010100 0.5 0.23 0.5 1111101 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">At</span><span class="el-number">#85</span></div>
+                        <div class="el-name">Astatine 砹</div>
+                        <code>0.2 0.5 0.21 0.5 1010101 0.5 0.22 0.5 1010101 0.5 0.23 0.5 1111111 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Rn</span><span class="el-number">#86</span></div>
+                        <div class="el-name">Radon 氡</div>
+                        <code>0.2 0.5 0.21 0.5 1010110 0.5 0.22 0.5 1010110 0.5 0.23 0.5 10001000 0.5 0.9</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 7 -->
+            <div class="codebook-section">
+                <h3 class="period-title">Period 7 · 第七周期</h3>
+                <div class="element-grid">
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Fr</span><span class="el-number">#87</span></div>
+                        <div class="el-name">Francium 钫</div>
+                        <code>0.2 0.5 0.21 0.5 1010111 0.5 0.22 0.5 1010111 0.5 0.23 0.5 10001000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ra</span><span class="el-number">#88</span></div>
+                        <div class="el-name">Radium 镭</div>
+                        <code>0.2 0.5 0.21 0.5 1011000 0.5 0.22 0.5 1011000 0.5 0.23 0.5 10001010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ac</span><span class="el-number">#89</span></div>
+                        <div class="el-name">Actinium 锕</div>
+                        <code>0.2 0.5 0.21 0.5 1011001 0.5 0.22 0.5 1011001 0.5 0.23 0.5 10001010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Th</span><span class="el-number">#90</span></div>
+                        <div class="el-name">Thorium 钍</div>
+                        <code>0.2 0.5 0.21 0.5 1011010 0.5 0.22 0.5 1011010 0.5 0.23 0.5 10001110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Pa</span><span class="el-number">#91</span></div>
+                        <div class="el-name">Protactinium 镤</div>
+                        <code>0.2 0.5 0.21 0.5 1011011 0.5 0.22 0.5 1011011 0.5 0.23 0.5 10001110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">U</span><span class="el-number">#92</span></div>
+                        <div class="el-name">Uranium 铀</div>
+                        <code>0.2 0.5 0.21 0.5 1011100 0.5 0.22 0.5 1011100 0.5 0.23 0.5 10010010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Np</span><span class="el-number">#93</span></div>
+                        <div class="el-name">Neptunium 镎</div>
+                        <code>0.2 0.5 0.21 0.5 1011101 0.5 0.22 0.5 1011101 0.5 0.23 0.5 10010100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Pu</span><span class="el-number">#94</span></div>
+                        <div class="el-name">Plutonium 钚</div>
+                        <code>0.2 0.5 0.21 0.5 1011110 0.5 0.22 0.5 1011110 0.5 0.23 0.5 10010110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Am</span><span class="el-number">#95</span></div>
+                        <div class="el-name">Americium 镅</div>
+                        <code>0.2 0.5 0.21 0.5 1011111 0.5 0.22 0.5 1011111 0.5 0.23 0.5 10010110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Cm</span><span class="el-number">#96</span></div>
+                        <div class="el-name">Curium 锔</div>
+                        <code>0.2 0.5 0.21 0.5 1100000 0.5 0.22 0.5 1100000 0.5 0.23 0.5 10011001 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Bk</span><span class="el-number">#97</span></div>
+                        <div class="el-name">Berkelium 锫</div>
+                        <code>0.2 0.5 0.21 0.5 1100001 0.5 0.22 0.5 1100001 0.5 0.23 0.5 10011010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Cf</span><span class="el-number">#98</span></div>
+                        <div class="el-name">Californium 锎</div>
+                        <code>0.2 0.5 0.21 0.5 1100010 0.5 0.22 0.5 1100010 0.5 0.23 0.5 10011011 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Es</span><span class="el-number">#99</span></div>
+                        <div class="el-name">Einsteinium 锿</div>
+                        <code>0.2 0.5 0.21 0.5 1100011 0.5 0.22 0.5 1100011 0.5 0.23 0.5 10011100 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Fm</span><span class="el-number">#100</span></div>
+                        <div class="el-name">Fermium 镄</div>
+                        <code>0.2 0.5 0.21 0.5 1100100 0.5 0.22 0.5 1100100 0.5 0.23 0.5 10011101 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Md</span><span class="el-number">#101</span></div>
+                        <div class="el-name">Mendelevium 钔</div>
+                        <code>0.2 0.5 0.21 0.5 1100101 0.5 0.22 0.5 1100101 0.5 0.23 0.5 10011110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">No</span><span class="el-number">#102</span></div>
+                        <div class="el-name">Nobelium 锘</div>
+                        <code>0.2 0.5 0.21 0.5 1100110 0.5 0.22 0.5 1100110 0.5 0.23 0.5 10011111 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Lr</span><span class="el-number">#103</span></div>
+                        <div class="el-name">Lawrencium 铹</div>
+                        <code>0.2 0.5 0.21 0.5 1100111 0.5 0.22 0.5 1100111 0.5 0.23 0.5 10100000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Rf</span><span class="el-number">#104</span></div>
+                        <div class="el-name">Rutherfordium 𬬻</div>
+                        <code>0.2 0.5 0.21 0.5 1101000 0.5 0.22 0.5 1101000 0.5 0.23 0.5 10100011 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Db</span><span class="el-number">#105</span></div>
+                        <div class="el-name">Dubnium 𬭊</div>
+                        <code>0.2 0.5 0.21 0.5 1101001 0.5 0.22 0.5 1101001 0.5 0.23 0.5 10100110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Sg</span><span class="el-number">#106</span></div>
+                        <div class="el-name">Seaborgium 𬭳</div>
+                        <code>0.2 0.5 0.21 0.5 1101010 0.5 0.22 0.5 1101010 0.5 0.23 0.5 10101000 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Bh</span><span class="el-number">#107</span></div>
+                        <div class="el-name">Bohrium 𬭛</div>
+                        <code>0.2 0.5 0.21 0.5 1101011 0.5 0.22 0.5 1101011 0.5 0.23 0.5 10101001 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Hs</span><span class="el-number">#108</span></div>
+                        <div class="el-name">Hassium 𬭶</div>
+                        <code>0.2 0.5 0.21 0.5 1101100 0.5 0.22 0.5 1101100 0.5 0.23 0.5 10101010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Mt</span><span class="el-number">#109</span></div>
+                        <div class="el-name">Meitnerium 鿏</div>
+                        <code>0.2 0.5 0.21 0.5 1101101 0.5 0.22 0.5 1101101 0.5 0.23 0.5 10101011 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ds</span><span class="el-number">#110</span></div>
+                        <div class="el-name">Darmstadtium 𫟼</div>
+                        <code>0.2 0.5 0.21 0.5 1101110 0.5 0.22 0.5 1101110 0.5 0.23 0.5 10101011 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Rg</span><span class="el-number">#111</span></div>
+                        <div class="el-name">Roentgenium 𬬭</div>
+                        <code>0.2 0.5 0.21 0.5 1101111 0.5 0.22 0.5 1101111 0.5 0.23 0.5 10101101 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Cn</span><span class="el-number">#112</span></div>
+                        <div class="el-name">Copernicium 鿔</div>
+                        <code>0.2 0.5 0.21 0.5 1110000 0.5 0.22 0.5 1110000 0.5 0.23 0.5 10101101 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Nh</span><span class="el-number">#113</span></div>
+                        <div class="el-name">Nihonium 鿭</div>
+                        <code>0.2 0.5 0.21 0.5 1110001 0.5 0.22 0.5 1110001 0.5 0.23 0.5 10101110 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Fl</span><span class="el-number">#114</span></div>
+                        <div class="el-name">Flerovium 𫓧</div>
+                        <code>0.2 0.5 0.21 0.5 1110010 0.5 0.22 0.5 1110010 0.5 0.23 0.5 10110001 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Mc</span><span class="el-number">#115</span></div>
+                        <div class="el-name">Moscovium 镆</div>
+                        <code>0.2 0.5 0.21 0.5 1110011 0.5 0.22 0.5 1110011 0.5 0.23 0.5 10110010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Lv</span><span class="el-number">#116</span></div>
+                        <div class="el-name">Livermorium 𫟷</div>
+                        <code>0.2 0.5 0.21 0.5 1110100 0.5 0.22 0.5 1110100 0.5 0.23 0.5 10110001 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Ts</span><span class="el-number">#117</span></div>
+                        <div class="el-name">Tennessine 鿬</div>
+                        <code>0.2 0.5 0.21 0.5 1110101 0.5 0.22 0.5 1110101 0.5 0.23 0.5 10110010 0.5 0.9</code>
+                    </div>
+                    <div class="element-item">
+                        <div class="el-header"><span class="el-symbol">Og</span><span class="el-number">#118</span></div>
+                        <div class="el-name">Oganesson 鿫</div>
+                        <code>0.2 0.5 0.21 0.5 1110110 0.5 0.22 0.5 1110110 0.5 0.23 0.5 10110010 0.5 0.9</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ion Examples -->
+            <div class="codebook-section">
+                <h3>Common Ions</h3>
+                <p class="cn-subtitle">常见离子</p>
+                <p style="margin-bottom: 24px; color: var(--text-secondary);">
+                    When electrons ≠ protons, the particle carries a net electric charge.
+                    Positive ions (cations) have fewer electrons; negative ions (anions) have more.
+                    <span class="cn" style="display: block; margin-top: 8px; color: var(--text-dim);">
+                        当电子数 ≠ 质子数时，粒子携带净电荷。正离子（阳离子）电子较少；负离子（阴离子）电子较多。
+                    </span>
+                </p>
+
+                <div class="ion-grid">
+                    <!-- Monovalent Cations -->
+                    <div class="ion-card">
+                        <h5>Monovalent Cations (+1) 一价阳离子</h5>
+                        <div class="ion-pair">
+                            <div class="neutral">H → H⁺ (Proton 质子)</div>
+                            <code>0.2 0.5 0.21 0.5 0 0.5 0.22 0.5 1 0.5 0.23 0.5 0 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Li → Li⁺</div>
+                            <code>0.2 0.5 0.21 0.5 10 0.5 0.22 0.5 11 0.5 0.23 0.5 100 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Na → Na⁺</div>
+                            <code>0.2 0.5 0.21 0.5 1010 0.5 0.22 0.5 1011 0.5 0.23 0.5 1100 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">K → K⁺</div>
+                            <code>0.2 0.5 0.21 0.5 10010 0.5 0.22 0.5 10011 0.5 0.23 0.5 10100 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Ag → Ag⁺</div>
+                            <code>0.2 0.5 0.21 0.5 101110 0.5 0.22 0.5 101111 0.5 0.23 0.5 111100 0.5 0.9</code>
+                        </div>
+                    </div>
+
+                    <!-- Divalent Cations -->
+                    <div class="ion-card">
+                        <h5>Divalent Cations (+2) 二价阳离子</h5>
+                        <div class="ion-pair">
+                            <div class="neutral">Mg → Mg²⁺</div>
+                            <code>0.2 0.5 0.21 0.5 1010 0.5 0.22 0.5 1100 0.5 0.23 0.5 1100 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Ca → Ca²⁺</div>
+                            <code>0.2 0.5 0.21 0.5 10010 0.5 0.22 0.5 10100 0.5 0.23 0.5 10100 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Fe → Fe²⁺</div>
+                            <code>0.2 0.5 0.21 0.5 11000 0.5 0.22 0.5 11010 0.5 0.23 0.5 11110 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Cu → Cu²⁺</div>
+                            <code>0.2 0.5 0.21 0.5 11011 0.5 0.22 0.5 11101 0.5 0.23 0.5 100010 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Zn → Zn²⁺</div>
+                            <code>0.2 0.5 0.21 0.5 11100 0.5 0.22 0.5 11110 0.5 0.23 0.5 100010 0.5 0.9</code>
+                        </div>
+                    </div>
+
+                    <!-- Trivalent Cations -->
+                    <div class="ion-card">
+                        <h5>Trivalent Cations (+3) 三价阳离子</h5>
+                        <div class="ion-pair">
+                            <div class="neutral">Al → Al³⁺</div>
+                            <code>0.2 0.5 0.21 0.5 1010 0.5 0.22 0.5 1101 0.5 0.23 0.5 1110 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Fe → Fe³⁺</div>
+                            <code>0.2 0.5 0.21 0.5 10111 0.5 0.22 0.5 11010 0.5 0.23 0.5 11110 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Cr → Cr³⁺</div>
+                            <code>0.2 0.5 0.21 0.5 10101 0.5 0.22 0.5 11000 0.5 0.23 0.5 11100 0.5 0.9</code>
+                        </div>
+                    </div>
+
+                    <!-- Monovalent Anions -->
+                    <div class="ion-card">
+                        <h5>Monovalent Anions (-1) 一价阴离子</h5>
+                        <div class="ion-pair">
+                            <div class="neutral">H → H⁻ (Hydride 氢负离子)</div>
+                            <code>0.2 0.5 0.21 0.5 10 0.5 0.22 0.5 1 0.5 0.23 0.5 0 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">F → F⁻ (Fluoride 氟离子)</div>
+                            <code>0.2 0.5 0.21 0.5 1010 0.5 0.22 0.5 1001 0.5 0.23 0.5 1010 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Cl → Cl⁻ (Chloride 氯离子)</div>
+                            <code>0.2 0.5 0.21 0.5 10010 0.5 0.22 0.5 10001 0.5 0.23 0.5 10010 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Br → Br⁻ (Bromide 溴离子)</div>
+                            <code>0.2 0.5 0.21 0.5 100100 0.5 0.22 0.5 100011 0.5 0.23 0.5 101100 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">I → I⁻ (Iodide 碘离子)</div>
+                            <code>0.2 0.5 0.21 0.5 110110 0.5 0.22 0.5 110101 0.5 0.23 0.5 1001010 0.5 0.9</code>
+                        </div>
+                    </div>
+
+                    <!-- Divalent Anions -->
+                    <div class="ion-card">
+                        <h5>Divalent Anions (-2) 二价阴离子</h5>
+                        <div class="ion-pair">
+                            <div class="neutral">O → O²⁻ (Oxide 氧离子)</div>
+                            <code>0.2 0.5 0.21 0.5 1010 0.5 0.22 0.5 1000 0.5 0.23 0.5 1000 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">S → S²⁻ (Sulfide 硫离子)</div>
+                            <code>0.2 0.5 0.21 0.5 10010 0.5 0.22 0.5 10000 0.5 0.23 0.5 10000 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">Se → Se²⁻ (Selenide 硒离子)</div>
+                            <code>0.2 0.5 0.21 0.5 100100 0.5 0.22 0.5 100010 0.5 0.23 0.5 101110 0.5 0.9</code>
+                        </div>
+                    </div>
+
+                    <!-- Trivalent Anions -->
+                    <div class="ion-card">
+                        <h5>Trivalent Anions (-3) 三价阴离子</h5>
+                        <div class="ion-pair">
+                            <div class="neutral">N → N³⁻ (Nitride 氮离子)</div>
+                            <code>0.2 0.5 0.21 0.5 1010 0.5 0.22 0.5 111 0.5 0.23 0.5 111 0.5 0.9</code>
+                        </div>
+                        <div class="ion-pair">
+                            <div class="neutral">P → P³⁻ (Phosphide 磷离子)</div>
+                            <code>0.2 0.5 0.21 0.5 10010 0.5 0.22 0.5 1111 0.5 0.23 0.5 10000 0.5 0.9</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codebook-explanation" style="margin-top: 24px;">
+                    By comparing neutral atoms with their ionic forms, we demonstrate that charge = protons - electrons.
+                    This universal relationship enables any civilization to understand electrical interactions.
+                    <span class="cn">
+                        通过比较中性原子及其离子形式，我们证明了电荷 = 质子 - 电子。
+                        这种普遍关系使任何文明都能理解电相互作用。
+                    </span>
+                </div>
+            </div>
+
+            <!-- Nuclear Fusion -->
+            <div class="codebook-section">
+                <h3>Nuclear Fusion</h3>
+                <p class="cn-subtitle">核聚变</p>
+                <div class="codebook-entry">
+                    <h4>Stellar Fusion — The Proton-Proton Chain <span class="symbol-badge">pp-chain</span></h4>
+                    <p style="margin-bottom: 16px; color: var(--text-secondary);">
+                        The proton-proton chain reaction that powers our Sun and most stars.
+                        This is the most universal "industrial process" in the cosmos.
+                        <span class="cn" style="display: block; margin-top: 8px; color: var(--text-dim);">
+                            驱动太阳和大多数恒星的质子-质子链反应。这是宇宙中最普遍的"工业过程"。
+                        </span>
+                    </p>
+                    <div class="codebook-sequence">
+                        <!-- Step 1: Proton-Proton Fusion (Produce Deuterium) -->
+                        <div class="sequence-line">
+                            <h5 style="color: var(--aurora-green); margin-bottom: 8px;">Step 1: Proton-Proton Fusion 第一步：质子-质子融合（生成氘）</h5>
+                            <code>10 0.5 0.13 0.5 0.2 0.5 0.21 0.5 1 0.5 0.22 0.5 1 0.5 0.23 0.5 0 0.5 0.11 0.5 10 0.5 0.13 0.5 0.2 0.5 0.21 0.5 0.15 0.5 0.2 0.5 0.21 0.5 1 0.5 0.22 0.5 1 0.5 0.23 0.5 1 0.5 0.11 0.5 10 0.5 0.13 0.5 0.2 0.5 0.21 0.5 0.11 0.5 0.2 0.5 0.25 0.5 0.11 0.5 0.2 0.5 0.24 0.5 0.11 0.5 0.2 0.5 0.26 0.5 0.9</code>
+                            <p class="translation">2H(1e1p0n) + 2e⁻ → D(1e1p1n) + 2e⁻ + e⁺ + ν + γ</p>
+                            <p class="translation cn">2个氢原子(1e1p0n) + 2个电子 = 氘核(1e1p1n) + 2个电子 + 正电子 + 中微子 + 光子</p>
+                        </div>
+                        <!-- Step 2: Proton-Deuterium Fusion (Produce Helium-3) -->
+                        <div class="sequence-line">
+                            <h5 style="color: var(--aurora-green); margin-bottom: 8px;">Step 2: Proton-Deuterium Fusion 第二步：质子-氘融合（生成氦-3）</h5>
+                            <code>0.2 0.5 0.21 0.5 1 0.5 0.22 0.5 1 0.5 0.23 0.5 1 0.5 0.11 0.5 0.2 0.5 0.21 0.5 1 0.5 0.22 0.5 1 0.5 0.23 0.5 0 0.5 0.11 0.5 10 0.5 0.13 0.5 0.2 0.5 0.21 0.5 0.15 0.5 0.2 0.5 0.21 0.5 10 0.5 0.22 0.5 10 0.5 0.23 0.5 1 0.5 0.11 0.5 10 0.5 0.13 0.5 0.2 0.5 0.21 0.5 0.11 0.5 0.2 0.5 0.26 0.5 0.9</code>
+                            <p class="translation">D(1e1p1n) + H(1e1p0n) + 2e⁻ → ³He(2e2p1n) + 2e⁻ + γ</p>
+                            <p class="translation cn">氘核(1e1p1n) + 氢原子(1e1p0n) + 2个电子 = 氦-3核(2e2p1n) + 2个电子 + 光子</p>
+                        </div>
+                        <!-- Step 3: Helium-3 Fusion (Produce Helium-4) -->
+                        <div class="sequence-line">
+                            <h5 style="color: var(--aurora-green); margin-bottom: 8px;">Step 3: Helium-3 Fusion 第三步：氦-3融合（生成氦-4）</h5>
+                            <code>10 0.5 0.13 0.5 0.2 0.5 0.21 0.5 10 0.5 0.22 0.5 10 0.5 0.23 0.5 1 0.5 0.11 0.5 100 0.5 0.13 0.5 0.2 0.5 0.21 0.5 0.15 0.5 0.2 0.5 0.21 0.5 10 0.5 0.22 0.5 10 0.5 0.23 0.5 10 0.5 0.11 0.5 10 0.5 0.13 0.5 0.2 0.5 0.21 0.5 1 0.5 0.22 0.5 1 0.5 0.23 0.5 0 0.5 0.11 0.5 100 0.5 0.13 0.5 0.2 0.5 0.21 0.5 0.11 0.5 0.2 0.5 0.26 0.5 0.9 0.5 0.9</code>
+                            <p class="translation">2×³He(2e2p1n) + 4e⁻ → ⁴He(2e2p2n) + 2H(1e1p0n) + 4e⁻ + γ</p>
+                            <p class="translation cn">2个氦-3核(2e2p1n) + 4个电子 = 氦-4核(2e2p2n) + 2个氢原子(1e1p0n) + 4个电子 + 光子</p>
+                        </div>
+                    </div>
+                    <div class="codebook-explanation">
+                        The complete proton-proton chain converts four hydrogen nuclei into one helium-4 nucleus,
+                        releasing tremendous energy in the process. This three-step reaction powers our Sun and most stars.
+                        <span class="cn">
+                            完整的质子-质子链将四个氢核转化为一个氦-4核，在此过程中释放巨大能量。
+                            这个三步反应为我们的太阳和大多数恒星提供能量。
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="philosophy" style="padding: 80px 0;">
+        <div class="container">
+            <div class="philosophy-quote" style="max-width: 800px; margin: 0 auto;">
+                <blockquote style="font-size: 24px;">
+                    "The nitrogen in our DNA, the calcium in our teeth, the iron in our blood,
+                    the carbon in our apple pies were made in the interiors of collapsing stars."
+                </blockquote>
+                <cite>— Carl Sagan</cite>
+                <p class="quote-reflection">
+                    Every atom described in these codebooks was once forged in a stellar furnace.
+                    By encoding the structure of matter, we encode our own origin story — and share it
+                    with any civilization that might listen. They, too, are made of the same star-stuff.
+                </p>
+                <p class="quote-reflection cn">
+                    这些密码本中描述的每一个原子都曾在恒星熔炉中锻造。
+                    通过编码物质的结构，我们编码了我们自己的起源故事——并与任何可能在倾听的文明分享。
+                    他们也是由同样的星尘构成的。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 To Infinite and Beyond. For humanity, for the cosmos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Infinite and Beyond | 超越无限</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Starfield Background -->
+    <div class="starfield" id="starfield"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-symbol">∞</span>
+                    <span class="logo-text">To Infinite and Beyond</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home <span class="nav-chinese">首页</span></a></li>
+                <li class="nav-item"><a href="#vision" class="nav-link">Vision <span class="nav-chinese">愿景</span></a></li>
+                <li class="nav-item"><a href="#dictionary" class="nav-link">Dictionary <span class="nav-chinese">词典</span></a></li>
+                <li class="nav-item"><a href="#codebook" class="nav-link">Codebook <span class="nav-chinese">密码本</span></a></li>
+                <li class="nav-item"><a href="#coordinates" class="nav-link">Coordinates <span class="nav-chinese">坐标</span></a></li>
+                <li class="nav-item"><a href="#philosophy" class="nav-link">Philosophy <span class="nav-chinese">哲思</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="signal-animation">
+                <span class="signal-dot"></span>
+                <span class="signal-wave"></span>
+                <span class="signal-wave"></span>
+                <span class="signal-wave"></span>
+            </div>
+            <h1 class="hero-title">To Infinite and Beyond</h1>
+            <p class="hero-subtitle">超越无限</p>
+            <div class="hero-tagline">
+                <p class="hero-description">A Universal Language for Interstellar Communication</p>
+                <p class="hero-description-cn">一种用于星际交流的宇宙语言</p>
+            </div>
+            <div class="binary-stream">
+                <span>1 0.5 0.11 0.5 1 0.5 0.15 0.5 10 0.5 0.9</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision" id="vision">
+        <div class="container">
+            <div class="vision-header">
+                <span class="section-label">Our Vision</span>
+                <h2 class="section-title">When We Look Up at the Stars</h2>
+                <p class="section-title-cn">当我们仰望星空</p>
+            </div>
+            <div class="vision-content">
+                <div class="vision-text">
+                    <p class="vision-quote">"We are a way for the cosmos to know itself."</p>
+                    <p class="vision-quote-author">— Carl Sagan</p>
+                    <p class="vision-description">
+                        For millennia, humanity has gazed at the night sky with wonder and curiosity.
+                        We have always asked: Are we alone? If not, how could we ever communicate
+                        with minds utterly different from our own?
+                    </p>
+                    <p class="vision-description-cn">
+                        千百年来，人类怀着好奇与敬畏仰望星空。我们始终追问：我们是否孤独？
+                        如果不是，我们如何与完全不同的智慧生命交流？
+                    </p>
+                    <p class="vision-description">
+                        This project answers that question through electromagnetic waves — the only
+                        messenger that can traverse the cosmic void. Binary pulses of light become
+                        our alphabet, physics becomes our grammar, and mathematics becomes our shared truth.
+                    </p>
+                    <p class="vision-description-cn">
+                        这个项目通过电磁波来回答这个问题——这是唯一能穿越宇宙虚空的信使。
+                        光的二进制脉冲成为我们的字母，物理成为我们的语法，数学成为我们共同的真理。
+                    </p>
+                </div>
+                <div class="vision-visual">
+                    <div class="binary-star-system">
+                        <div class="binary-center"></div>
+                        <!-- Binary stars orbit -->
+                        <div class="binary-orbit">
+                            <div class="star star-a"></div>
+                            <div class="star star-b"></div>
+                        </div>
+                        <div class="binary-glow glow-a"></div>
+                        <div class="binary-glow glow-b"></div>
+                        <div class="orbit-trail orbit-trail-stars"></div>
+                        <!-- Planet 1 - Inner orbit -->
+                        <div class="planet-orbit planet-orbit-1">
+                            <div class="planet planet-1"></div>
+                        </div>
+                        <div class="orbit-trail orbit-trail-planet-1"></div>
+                        <!-- Planet 2 - Outer orbit -->
+                        <div class="planet-orbit planet-orbit-2">
+                            <div class="planet planet-2"></div>
+                        </div>
+                        <div class="orbit-trail orbit-trail-planet-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Principles Section -->
+    <section class="principles" id="principles">
+        <div class="container">
+            <span class="section-label">Core Principles</span>
+            <h2 class="section-title">The Foundation of Universal Understanding</h2>
+            <p class="section-title-cn">宇宙理解的基石</p>
+
+            <div class="principles-grid">
+                <div class="principle-card" data-aos="fade-up">
+                    <div class="card-glow"></div>
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <h3 class="principle-title">Electromagnetic Waves</h3>
+                    <p class="principle-title-cn">电磁波编码</p>
+                    <p class="principle-desc">Complete cycle = 1, Empty cycle = 0</p>
+                    <p class="principle-desc">Partial cycle (0.5) = Symbol separator</p>
+                    <p class="principle-desc-cn">完整周期=1，空周期=0，部分周期=分隔符</p>
+                    <div class="card-border"></div>
+                </div>
+
+                <div class="principle-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="principle-title">Self-Explanatory Codebooks</h3>
+                    <p class="principle-title-cn">自解释密码本</p>
+                    <p class="principle-desc">Each new symbol defined through examples using only established symbols</p>
+                    <p class="principle-desc-cn">每个新符号通过已知符号的示例来定义</p>
+                    <div class="card-border"></div>
+                </div>
+
+                <div class="principle-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="principle-title">Planck Units</h3>
+                    <p class="principle-title-cn">普朗克单位制</p>
+                    <p class="principle-desc">Universal measurement based on c, G, ℏ — constants any civilization must know</p>
+                    <p class="principle-desc-cn">基于c、G、ℏ的通用测量系统</p>
+                    <div class="card-border"></div>
+                </div>
+
+                <div class="principle-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-glow"></div>
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12l2 2 4-4"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="principle-title">Unique Interpretation</h3>
+                    <p class="principle-title-cn">唯一解读性</p>
+                    <p class="principle-desc">Multiple examples + boundary cases = only one possible meaning</p>
+                    <p class="principle-desc-cn">多个示例+边界条件=唯一正确含义</p>
+                    <div class="card-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dictionary Section -->
+    <section class="dictionary" id="dictionary">
+        <div class="container">
+            <span class="section-label">Universal Dictionary</span>
+            <h2 class="section-title">The Vocabulary of the Cosmos</h2>
+            <p class="section-title-cn">宇宙的词汇</p>
+            <p class="section-intro">
+                Each "word" is a partial electromagnetic wave cycle — a symbol that carries meaning across the stars.
+                <span class="cn">每个"词汇"是一段电磁波——一个能跨越星际传递意义的符号。</span>
+            </p>
+
+            <div class="dictionary-links">
+                <a href="mathematics.html" class="dictionary-card">
+                    <div class="dict-card-glow"></div>
+                    <div class="dict-icon">
+                        <span class="dict-symbol">0.1x</span>
+                    </div>
+                    <div class="dict-content">
+                        <h3>Mathematics</h3>
+                        <p class="cn-title">数学符号</p>
+                        <p class="dict-desc">The language of logic — addition, subtraction, comparison, sets, and unknowns</p>
+                        <p class="dict-desc cn">逻辑的语言——加减乘除、比较、集合与未知数</p>
+                    </div>
+                    <div class="dict-arrow">→</div>
+                </a>
+
+                <a href="matter.html" class="dictionary-card">
+                    <div class="dict-card-glow"></div>
+                    <div class="dict-icon">
+                        <span class="dict-symbol">0.2x</span>
+                    </div>
+                    <div class="dict-content">
+                        <h3>Matter</h3>
+                        <p class="cn-title">物质符号</p>
+                        <p class="dict-desc">118 elements, ions, and nuclear reactions — the building blocks of reality</p>
+                        <p class="dict-desc cn">118种元素、离子与核反应——现实的基本构件</p>
+                    </div>
+                    <div class="dict-arrow">→</div>
+                </a>
+
+                <a href="physics.html" class="dictionary-card">
+                    <div class="dict-card-glow"></div>
+                    <div class="dict-icon">
+                        <span class="dict-symbol">0.3x</span>
+                    </div>
+                    <div class="dict-content">
+                        <h3>Physics</h3>
+                        <p class="cn-title">物理符号</p>
+                        <p class="dict-desc">Universal constants and Planck units — the fabric of spacetime itself</p>
+                        <p class="dict-desc cn">宇宙常数与普朗克单位——时空本身的结构</p>
+                    </div>
+                    <div class="dict-arrow">→</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Codebook Section -->
+    <section class="codebook" id="codebook">
+        <div class="container">
+            <span class="section-label">Codebook Design</span>
+            <h2 class="section-title">The Art of Self-Explanation</h2>
+            <p class="section-title-cn">自解释的艺术</p>
+            <p class="section-intro">
+                How do you teach a symbol to someone who shares no language with you? Through pure logic and example.
+                <span class="cn">如何向一个与你毫无共同语言的对象教授一个符号？通过纯粹的逻辑与示例。</span>
+            </p>
+
+            <div class="codebook-preview">
+                <div class="codebook-example-mini">
+                    <h4>Example: Teaching "Greater Than" (>)</h4>
+                    <p class="cn">示例：教授"大于"符号</p>
+                    <div class="example-steps">
+                        <div class="mini-step">
+                            <code>2 ? 1 = True</code>
+                            <code>3 ? 2 = True</code>
+                            <code class="critical">2 ? 2 = False ← Key boundary!</code>
+                            <code>1 ? 2 = False</code>
+                        </div>
+                        <p class="example-conclusion">Only "greater than" fits all cases. No other interpretation works.</p>
+                        <p class="example-conclusion cn">只有"大于"符合所有情况，不存在其他可能的解释。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="codebook-links">
+                <a href="codebook-math.html" class="codebook-card">
+                    <div class="cb-icon">∑</div>
+                    <h3>Mathematics Codebooks</h3>
+                    <p class="cn-title">数学密码本</p>
+                    <p>Arithmetic, comparison, sets, exponents, unknowns</p>
+                    <p class="cn">运算、比较、集合、指数、未知数</p>
+                </a>
+
+                <a href="codebook-matter.html" class="codebook-card">
+                    <div class="cb-icon">⚛</div>
+                    <h3>Matter Codebooks</h3>
+                    <p class="cn-title">物质密码本</p>
+                    <p>Atoms, ions, nuclear fusion reactions</p>
+                    <p class="cn">原子、离子、核聚变反应</p>
+                </a>
+
+                <a href="codebook-physics.html" class="codebook-card">
+                    <div class="cb-icon">λ</div>
+                    <h3>Physics Codebooks</h3>
+                    <p class="cn-title">物理密码本</p>
+                    <p>Speed of light, Planck units derivations</p>
+                    <p class="cn">光速、普朗克单位推导</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earth Coordinates Section -->
+    <section class="coordinates" id="coordinates">
+        <div class="container">
+            <span class="section-label">Earth Coordinates</span>
+            <h2 class="section-title">Our Address in the Cosmos</h2>
+            <p class="section-title-cn">我们在宇宙中的地址</p>
+
+            <div class="coordinates-content">
+                <div class="coord-visual">
+                    <div class="pulsar-map">
+                        <div class="earth-center"></div>
+                        <div class="pulsar-line" style="--angle: 15deg; --length: 80px;"></div>
+                        <div class="pulsar-line" style="--angle: 45deg; --length: 100px;"></div>
+                        <div class="pulsar-line" style="--angle: 78deg; --length: 60px;"></div>
+                        <div class="pulsar-line" style="--angle: 120deg; --length: 90px;"></div>
+                        <div class="pulsar-line" style="--angle: 156deg; --length: 75px;"></div>
+                        <div class="pulsar-line" style="--angle: 198deg; --length: 85px;"></div>
+                        <div class="pulsar-line" style="--angle: 234deg; --length: 70px;"></div>
+                        <div class="pulsar-line" style="--angle: 267deg; --length: 95px;"></div>
+                        <div class="pulsar-line" style="--angle: 312deg; --length: 65px;"></div>
+                        <div class="pulsar-line" style="--angle: 340deg; --length: 88px;"></div>
+                    </div>
+                </div>
+                <div class="coord-text">
+                    <h3>Finding Home Among the Stars</h3>
+                    <p class="cn-subtitle">在群星中找到家园</p>
+                    <p>
+                        How do you tell someone where you live when there are no shared street names,
+                        no common maps? You use the universe's own landmarks — <strong>pulsars</strong>,
+                        those cosmic lighthouses that spin with clockwork precision.
+                    </p>
+                    <p class="cn">
+                        当没有共同的街道名称、没有通用的地图时，你如何告诉别人你住在哪里？
+                        你使用宇宙自己的地标——<strong>脉冲星</strong>，那些以精确如钟表般旋转的宇宙灯塔。
+                    </p>
+                    <p>
+                        15 pulsars, each with a unique rotation period and distance, triangulate Earth's position.
+                        And for time? The <strong>Cosmic Microwave Background</strong> — the afterglow of the Big Bang —
+                        provides a universal clock, slowly cooling as the universe ages.
+                    </p>
+                    <p class="cn">
+                        15颗脉冲星，每颗都有独特的旋转周期和距离，三角定位出地球的位置。
+                        那时间呢？<strong>宇宙微波背景辐射</strong>——大爆炸的余辉——
+                        提供了一个宇宙时钟，随着宇宙衰老而缓慢冷却。
+                    </p>
+                    <a href="earth-coordinates.html" class="coord-link">
+                        Explore the Full Coordinate System →
+                        <span class="cn">探索完整坐标系统</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <span class="section-label">Philosophy</span>
+            <h2 class="section-title">Why We Reach for the Stars</h2>
+            <p class="section-title-cn">为何我们向往星辰</p>
+
+            <div class="philosophy-content">
+                <div class="philosophy-card main">
+                    <div class="philosophy-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a10 10 0 0 0 0 20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <div class="philosophy-main-text">
+                        <h3>The Human Spirit</h3>
+                        <p class="cn-title">人类精神</p>
+                        <p>
+                            This project is not just about science — it is about who we are as a species.
+                            We are beings who ask questions, who seek connection, who refuse to accept
+                            that we might be forever alone in the vast cosmic ocean.
+                        </p>
+                        <p class="cn">
+                            这个项目不仅仅关乎科学——它关乎我们作为一个物种的本质。
+                            我们是会提问的生命，渴望连接的生命，拒绝接受我们可能永远孤独于
+                            这浩瀚宇宙海洋中的生命。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="philosophy-cards-row">
+                    <div class="philosophy-card">
+                        <h3>Mathematics: The Universal Truth</h3>
+                        <p class="cn-title">数学：普遍真理</p>
+                        <p>1 + 1 = 2 everywhere in the universe. This simple equation is our bridge across the stars — the first handshake between civilizations.</p>
+                        <p class="cn">在宇宙的任何地方，1 + 1 = 2。这个简单的等式是我们跨越星际的桥梁——文明间的第一次握手。</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3>Physics: The Shared Experience</h3>
+                        <p class="cn-title">物理：共同经验</p>
+                        <p>Light travels at the same speed for all observers. Gravity bends spacetime the same way everywhere. These laws bind all intelligent beings.</p>
+                        <p class="cn">光对所有观察者以相同速度传播。引力在任何地方都以相同方式弯曲时空。这些定律连接所有智慧生命。</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3>Matter: The Common Ancestry</h3>
+                        <p class="cn-title">物质：共同起源</p>
+                        <p>Every atom in our bodies was forged in the heart of a star. We are literally made of stardust — as is any life that might be listening.</p>
+                        <p class="cn">我们身体中的每一个原子都是在恒星核心中锻造的。我们确实由星尘构成——任何可能在倾听的生命也是如此。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="philosophy-quote">
+                <blockquote>
+                    "The universe is under no obligation to make sense to you.
+                    But it does, and that is the most profound mystery."
+                </blockquote>
+                <cite>— Adapted from Neil deGrasse Tyson</cite>
+                <p class="quote-reflection">
+                    That the cosmos is comprehensible at all — that mathematics works,
+                    that physics has laws — is the foundation upon which this entire project rests.
+                    We bet that any mind capable of receiving our message shares this miracle with us.
+                </p>
+                <p class="quote-reflection cn">
+                    宇宙竟然是可以理解的——数学是有效的，物理是有规律的——
+                    这是整个项目的基础。我们相信，任何能够接收我们信息的智慧都与我们共享这个奇迹。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <span class="section-label">About This Project</span>
+            <h2 class="section-title">A Message to the Future</h2>
+            <p class="section-title-cn">致未来的信息</p>
+
+            <div class="about-content">
+                <p>
+                    "To Infinite and Beyond" is an ongoing project to design a complete,
+                    self-explanatory language system for potential interstellar communication.
+                    It combines rigorous scientific methodology with deep humanistic reflection
+                    on our place in the cosmos.
+                </p>
+                <p class="cn">
+                    "超越无限"是一个持续进行的项目，旨在设计一套完整的、自解释的
+                    语言系统，用于潜在的星际交流。它将严谨的科学方法论与对我们在宇宙中
+                    位置的深刻人文思考相结合。
+                </p>
+
+                <div class="project-stats">
+                    <div class="stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Mathematical Symbols<br>数学符号</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">118</span>
+                        <span class="stat-label">Elements Encoded<br>元素编码</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Physical Quantities<br>物理量</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Possibilities<br>无限可能</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-symbol">∞</span>
+                    <span>To Infinite and Beyond</span>
+                </div>
+                <div class="footer-message">
+                    <p>"We are made of star-stuff. We are a way for the universe to know itself."</p>
+                    <p class="cn">"我们由星尘构成。我们是宇宙认识自己的一种方式。"</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 To Infinite and Beyond. For humanity, for the cosmos.</p>
+                <p class="cn">为人类，为宇宙。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
