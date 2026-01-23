@@ -1321,6 +1321,9 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .stat {
@@ -1329,6 +1332,8 @@ section {
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
     transition: var(--transition);
+    min-width: 0;
+    overflow: hidden;
 }
 
 .stat:hover {
@@ -1351,6 +1356,9 @@ section {
 .stat-label {
     font-size: 14px;
     color: var(--text-muted);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Footer */
@@ -3321,27 +3329,34 @@ section {
         gap: 20px !important;
     }
 
+    /* About section - 让数据统计使用全宽 */
+    .about-content {
+        max-width: 100% !important;
+    }
+
     /* About section 数据统计横向排列不超出容器 */
     .project-stats {
         display: grid !important;
         grid-template-columns: repeat(4, 1fr) !important;
-        gap: 8px !important;
+        gap: 10px !important;
         width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
     }
 
     .stat {
-        padding: 16px 8px !important;
+        padding: 16px 10px !important;
         min-width: 0 !important;
         box-sizing: border-box !important;
+        text-align: center !important;
     }
 
     .stat-number {
-        font-size: 24px !important;
+        font-size: 28px !important;
     }
 
     .stat-label {
-        font-size: 9px !important;
+        font-size: 10px !important;
         line-height: 1.3 !important;
         word-break: break-word !important;
         hyphens: auto !important;
@@ -3365,6 +3380,29 @@ section {
     /* 小屏幕保持4列横向排列 */
     .project-stats {
         grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .stat {
+        padding: 14px 8px !important;
+        border-radius: 12px !important;
+    }
+
+    .stat-number {
+        font-size: 24px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .stat-label {
+        font-size: 9px !important;
+        line-height: 1.25 !important;
+    }
+}
+
+@media (max-width: 380px) {
+    /* 超小屏幕 */
+    .project-stats {
+        grid-template-columns: repeat(4, 1fr) !important;
         gap: 6px !important;
     }
 
@@ -3384,25 +3422,148 @@ section {
     }
 }
 
-@media (max-width: 380px) {
-    /* 超小屏幕 */
-    .project-stats {
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 4px !important;
+/* ============================================
+   EARTH COORDINATES PAGE - MOBILE FIXES
+   脉冲星数据在手机端的显示修复
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* 脉冲星表格容器 */
+    .pulsar-table {
+        padding: 20px !important;
+        overflow: hidden !important;
     }
 
-    .stat {
-        padding: 10px 4px !important;
-        border-radius: 8px !important;
+    /* 脉冲星列表 */
+    .pulsar-list {
+        gap: 16px !important;
     }
 
-    .stat-number {
-        font-size: 18px !important;
-        margin-bottom: 2px !important;
+    /* 每个脉冲星项目 */
+    .pulsar-item {
+        padding: 16px !important;
+        overflow: hidden !important;
     }
 
-    .stat-label {
-        font-size: 7px !important;
-        line-height: 1.2 !important;
+    /* 脉冲星项目内的代码块 - 允许换行和横向滚动 */
+    .pulsar-item code {
+        font-size: 11px !important;
+        word-break: break-all !important;
+        white-space: pre-wrap !important;
+        overflow-x: auto !important;
+        display: block !important;
+        max-width: 100% !important;
+    }
+
+    /* 翻译文字 */
+    .pulsar-item span[style*="font-size: 12px"] {
+        font-size: 11px !important;
+        display: block !important;
+        margin-top: 8px !important;
+    }
+
+    /* 编码格式说明区域 */
+    .codebook-explanation {
+        padding: 16px !important;
+    }
+
+    .codebook-explanation code {
+        font-size: 10px !important;
+        word-break: break-all !important;
+        white-space: pre-wrap !important;
+    }
+
+    /* 示例格式区域 */
+    .codebook-explanation div[style*="padding: 10px"] code {
+        font-size: 9px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* CMB编码区域 */
+    .cmb-encoding .encoding-box code {
+        font-size: 10px !important;
+        word-break: break-all !important;
+        white-space: pre-wrap !important;
+        line-height: 1.5 !important;
+    }
+
+    /* 人类单位表格横向滚动 */
+    .pulsar-table div[style*="overflow-x: auto"] {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .pulsar-table table {
+        font-size: 12px !important;
+        min-width: 500px !important;
+    }
+
+    .pulsar-table th,
+    .pulsar-table td {
+        padding: 8px 6px !important;
+    }
+
+    /* 时间坐标部分 */
+    .temporal-significance .significance-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* 完整地址部分 */
+    .address-summary {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* 脉冲星介绍部分 */
+    .pulsar-intro {
+        grid-template-columns: 1fr !important;
+    }
+
+    .pulsar-visual-large {
+        margin: 0 auto 32px !important;
+    }
+
+    /* CMB部分 */
+    .cmb-content {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cmb-visual {
+        margin: 0 auto 32px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 更小屏幕 - 脉冲星数据进一步优化 */
+    .pulsar-item {
+        padding: 12px !important;
+    }
+
+    .pulsar-item code {
+        font-size: 9px !important;
+        padding: 6px 8px !important;
+        line-height: 1.4 !important;
+    }
+
+    .pulsar-item span[style*="font-size: 12px"] {
+        font-size: 10px !important;
+    }
+
+    /* 脉冲星编号和名称 */
+    .pulsar-item > div:first-child {
+        flex-wrap: wrap !important;
+    }
+
+    .pulsar-item > div:first-child span[style*="font-size: 15px"] {
+        font-size: 13px !important;
+    }
+
+    /* 编码格式说明 */
+    .codebook-explanation div[style*="padding: 10px"] code {
+        font-size: 8px !important;
+    }
+
+    /* CMB编码 */
+    .cmb-encoding .encoding-box code {
+        font-size: 9px !important;
     }
 }
