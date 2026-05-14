@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interrogatives Codebooks | 疑问词密码本 - To Infinite and Beyond</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="starfield" id="starfield"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-symbol">∞</span>
+                    <span class="logo-text">To Infinite and Beyond</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home <span class="nav-chinese">首页</span></a></li>
+                <li class="nav-item"><a href="index.html#dictionary" class="nav-link">Dictionary <span class="nav-chinese">词典</span></a></li>
+                <li class="nav-item"><a href="index.html#codebook" class="nav-link active">Codebook <span class="nav-chinese">密码本</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="subpage-hero">
+        <div class="container">
+            <a href="index.html#codebook" class="back-link">← Back to Codebooks</a>
+            <h1>Interrogatives Codebooks</h1>
+            <p class="cn-title">疑问词密码本</p>
+            <p class="intro">
+                These codebooks teach the first published interrogative — <strong>0.51 (solve)</strong> — through three
+                worked examples of increasing depth: a single-unknown equation, a two-unknown system that distinguishes
+                which variable is being asked about, and a unit-aware query that distinguishes <code>2tp</code> from
+                <code>2</code> and <code>2lp</code>. The 0.5x family is open: future members (0.52, 0.53, …) are reserved.
+                <span class="cn">
+                    本组密码本通过三个由浅入深的示例，教授第一个公开的疑问词
+                    <strong>0.51（求解）</strong>：单未知数方程、二元方程组（区分被询问的变量）、
+                    带单位求解（区分 <code>2tp</code>、<code>2</code>、<code>2lp</code>）。
+                    0.5x 系列开放——0.52、0.53… 为后续成员预留。
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="codebook-full">
+        <div class="container">
+
+            <!-- Example A: x + 1 = 2 -->
+            <div class="codebook-section">
+                <h3>Example A — Single Unknown</h3>
+                <p class="cn-subtitle">示例 A：单未知数方程</p>
+                <p style="margin-bottom: 16px; color: var(--text-secondary);">
+                    Statement: <code>x + 1 = 2</code>. Query: solve for <code>x</code>. Answer: <code>x = 1</code> (true).
+                    <span class="cn" style="display: block; margin-top: 8px; color: var(--text-dim);">
+                        陈述：<code>x + 1 = 2</code>。提问：求解 <code>x</code>。应答：<code>x = 1</code>（正确）。
+                    </span>
+                </p>
+
+                <div class="codebook-entry">
+                    <h4>Full Sequence <span class="symbol-badge">0.51 introduced</span></h4>
+                    <div class="codebook-sequence">
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.11 0.5 1 0.5 0.15 0.5 10 0.5 0.9 0.5 0.51 0.5 0.01 0.5 0.9 0.5 0.01 0.5 0.15 0.5 1 0.5 0.18 0.5 1 0.5 0.9 0.5 0.9</code>
+                            <p class="translation">x + 1 = 2 。 solve x 。 x = 1 → true 。。 <span class="cn">x + 1 = 2 。 求解 x 。 x = 1 → 正确 。。</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codebook-entry">
+                    <h4>Line-by-line Breakdown</h4>
+                    <div class="codebook-sequence">
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.11 0.5 1 0.5 0.15 0.5 10 0.5 0.9</code>
+                            <p class="translation">x + 1 = 2 。 — state the equation <span class="cn">陈述方程：x + 1 = 2 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.51 0.5 0.01 0.5 0.9</code>
+                            <p class="translation">solve x 。 — open the query, naming the unknown <span class="cn">开启提问：求解 x 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.15 0.5 1 0.5 0.18 0.5 1 0.5 0.9</code>
+                            <p class="translation">x = 1 → true 。 — assert the answer and mark it correct <span class="cn">应答并标真：x = 1 → 正确 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.5 0.9</code>
+                            <p class="translation">。。 — scenario terminator (the second 0.9 pairs with the answer's 0.9) <span class="cn">情景结束的双句号（与上一行的 0.9 共同构成 0.9 0.5 0.9）。</span></p>
+                        </div>
+                    </div>
+                    <div class="codebook-explanation">
+                        The receiver sees the canonical query pattern for the first time:
+                        <strong>statement → 0.51 + unknown → answer + 0.18 verdict</strong>. Pairing 0.51 with the
+                        same <code>0.01</code> token that appears in the equation tells the receiver which symbol the
+                        query is about, even before they fully decode 0.51's meaning.
+                        <span class="cn">
+                            接收者第一次看到标准提问范式：<strong>陈述 → 0.51 + 未知数 → 应答 + 0.18 判定</strong>。
+                            0.51 后面紧跟着出现在方程里的同一个 <code>0.01</code>，让接收者还没完全解码 0.51 时，
+                            就能从位置关系推断"这是在问 x 是多少"。
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example B: System -->
+            <div class="codebook-section">
+                <h3>Example B — Two-Unknown System</h3>
+                <p class="cn-subtitle">示例 B：二元方程组</p>
+                <p style="margin-bottom: 16px; color: var(--text-secondary);">
+                    Statement: <code>x₁ + x₂ = 3</code> and <code>x₂ − x₁ = 1</code>. The query asks for one variable
+                    at a time, and the answer rows include <em>deliberate wrong answers</em> so the receiver can see the
+                    boundaries: wrong value → false, and right value but wrong variable → also false.
+                    <span class="cn" style="display: block; margin-top: 8px; color: var(--text-dim);">
+                        陈述：<code>x₁ + x₂ = 3</code> 与 <code>x₂ − x₁ = 1</code>。
+                        每次只问一个变量，应答行刻意包含错误样本，让接收者看清边界：
+                        值错→错误；值对但变量对错（问 x₂ 答 x₁=1）→ 仍然错误。
+                    </span>
+                </p>
+
+                <div class="codebook-entry">
+                    <h4>Full Sequence <span class="symbol-badge">0.02 = subscript</span></h4>
+                    <div class="codebook-sequence">
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.02 0.5 1 0.5 0.11 0.5 0.01 0.5 0.02 0.5 10 0.5 0.15 0.5 11 0.5 0.9 0.5 0.01 0.5 0.02 0.5 10 0.5 0.12 0.5 0.01 0.5 0.02 0.5 1 0.5 0.15 0.5 1 0.5 0.9 0.5 0.51 0.5 0.01 0.5 0.02 0.5 1 0.5 0.9 0.5 0.01 0.5 0.02 0.5 1 0.5 0.15 0.5 1 0.5 0.18 0.5 1 0.5 0.9 0.5 0.51 0.5 0.01 0.5 0.02 0.5 10 0.5 0.9 0.5 0.01 0.5 0.02 0.5 10 0.5 0.15 0.5 10 0.5 0.18 0.5 1 0.5 0.9 0.5 0.51 0.5 0.01 0.5 0.02 0.5 10 0.5 0.9 0.5 0.01 0.5 0.02 0.5 10 0.5 0.15 0.5 1 0.5 0.18 0.5 0 0.5 0.9 0.5 0.51 0.5 0.01 0.5 0.02 0.5 10 0.5 0.9 0.5 0.01 0.5 0.02 0.5 1 0.5 0.15 0.5 1 0.5 0.18 0.5 0 0.5 0.9 0.5 0.9</code>
+                            <p class="translation">x₁ + x₂ = 3 。 x₂ − x₁ = 1 。 solve x₁ 。 x₁ = 1 → true 。 solve x₂ 。 x₂ = 2 → true 。 solve x₂ 。 x₂ = 1 → false 。 solve x₂ 。 x₁ = 1 → false 。。 <span class="cn">x₁+x₂=3 。 x₂-x₁=1 。 求解 x₁ 。 x₁=1 → 正确 。 求解 x₂ 。 x₂=2 → 正确 。 求解 x₂ 。 x₂=1 → 错误 。 求解 x₂ 。 x₁=1 → 错误 。。</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codebook-entry">
+                    <h4>Line-by-line Breakdown</h4>
+                    <div class="codebook-sequence">
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.02 0.5 1 0.5 0.11 0.5 0.01 0.5 0.02 0.5 10 0.5 0.15 0.5 11 0.5 0.9</code>
+                            <p class="translation">x₁ + x₂ = 3 。 — first equation; 0.02 is the subscript marker (so 0.01 0.02 1 reads as x₁) <span class="cn">第一条方程：x₁ + x₂ = 3 。 0.02 是下划线角标，所以 0.01 0.02 1 = x₁。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.02 0.5 10 0.5 0.12 0.5 0.01 0.5 0.02 0.5 1 0.5 0.15 0.5 1 0.5 0.9</code>
+                            <p class="translation">x₂ − x₁ = 1 。 — second equation <span class="cn">第二条方程：x₂ − x₁ = 1 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.51 0.5 0.01 0.5 0.02 0.5 1 0.5 0.9</code>
+                            <p class="translation">solve x₁ 。 — query targets x₁ specifically <span class="cn">提问：求解 x₁ 。 — 明确指向 x₁。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.02 0.5 1 0.5 0.15 0.5 1 0.5 0.18 0.5 1 0.5 0.9</code>
+                            <p class="translation">x₁ = 1 → true 。 <span class="cn">x₁ = 1 → 正确 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.51 0.5 0.01 0.5 0.02 0.5 10 0.5 0.9</code>
+                            <p class="translation">solve x₂ 。 <span class="cn">求解 x₂ 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.02 0.5 10 0.5 0.15 0.5 10 0.5 0.18 0.5 1 0.5 0.9</code>
+                            <p class="translation">x₂ = 2 → true 。 <span class="cn">x₂ = 2 → 正确 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.51 0.5 0.01 0.5 0.02 0.5 10 0.5 0.9</code>
+                            <p class="translation">solve x₂ 。 — same query repeated for a wrong-value test <span class="cn">同一提问，用以测试"值错"边界。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.02 0.5 10 0.5 0.15 0.5 1 0.5 0.18 0.5 0 0.5 0.9</code>
+                            <p class="translation">x₂ = 1 → false 。 — value is wrong (x₂ is 2, not 1) <span class="cn">x₂ = 1 → 错误 。 — 数值错（x₂ 应为 2）。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.51 0.5 0.01 0.5 0.02 0.5 10 0.5 0.9</code>
+                            <p class="translation">solve x₂ 。 — query repeated again for a wrong-variable test <span class="cn">再次提问 x₂，用以测试"问的是 x₂、答的却是 x₁"的边界。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.02 0.5 1 0.5 0.15 0.5 1 0.5 0.18 0.5 0 0.5 0.9</code>
+                            <p class="translation">x₁ = 1 → false 。 — even though x₁ = 1 is itself true, this answers the wrong variable <span class="cn">x₁ = 1 → 错误 。 — 等式本身成立，但回答的是 x₁ 而非被询问的 x₂，仍判错。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.5 0.9</code>
+                            <p class="translation">。。 — scenario terminator <span class="cn">情景结束的双句号。</span></p>
+                        </div>
+                    </div>
+                    <div class="codebook-explanation">
+                        The two false rows together pin down 0.51's exact semantics. After the first false answer the receiver
+                        might still believe 0.51 just means "find a true equation"; the second false answer —
+                        <code>x₁ = 1</code>, an equation that <em>is</em> true on its own — proves that 0.51 binds the answer
+                        to the specific variable it names. This is the same boundary-case discipline used to teach
+                        <code>&gt;</code> earlier in the codebook.
+                        <span class="cn">
+                            两条"错误"行共同钉死 0.51 的精确语义。看完第一条错误（x₂=1），接收者可能还以为 0.51 是"找一个成立的等式"；
+                            第二条错误是 <code>x₁ = 1</code>——它本身是真的，却仍然被判错——
+                            由此证明 0.51 把"应答"绑定到它点名的那个具体变量上。
+                            这与之前用 <code>&gt;</code> 边界示例教学的手法一致。
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example C: Unit-aware -->
+            <div class="codebook-section">
+                <h3>Example C — Unit-Aware Query</h3>
+                <p class="cn-subtitle">示例 C：带单位求解</p>
+                <p style="margin-bottom: 16px; color: var(--text-secondary);">
+                    Statement: <code>1 t_p + 1 t_p = x</code> where <code>t_p</code> is Planck time (0.31). The query asks
+                    for <code>x</code>, and the candidate answers test three distinct failure modes:
+                    correct value <em>with</em> the right unit (true), correct value <em>without</em> a unit (false),
+                    and correct value <em>with the wrong unit</em> — Planck length (false).
+                    <span class="cn" style="display: block; margin-top: 8px; color: var(--text-dim);">
+                        陈述：<code>1 t_p + 1 t_p = x</code>，其中 t_p 是普朗克时间（0.31）。提问求 x，
+                        候选答案覆盖三种失败模式：值对单位对（正确）、值对但漏单位（错误）、
+                        值对但单位换成普朗克长度（错误）。
+                    </span>
+                </p>
+
+                <div class="codebook-entry">
+                    <h4>Full Sequence <span class="symbol-badge">teaches unit-preservation</span></h4>
+                    <div class="codebook-sequence">
+                        <div class="sequence-line">
+                            <code>1 0.5 0.3 0.5 0.31 0.5 0.11 0.5 1 0.5 0.3 0.5 0.31 0.5 0.15 0.5 0.01 0.5 0.9 0.5 0.51 0.5 0.01 0.5 0.9 0.5 0.01 0.5 0.15 0.5 10 0.5 0.3 0.5 0.31 0.5 0.18 0.5 1 0.5 0.9 0.5 0.51 0.5 0.01 0.5 0.9 0.5 0.01 0.5 0.15 0.5 10 0.5 0.18 0.5 0 0.5 0.9 0.5 0.51 0.5 0.01 0.5 0.9 0.5 0.01 0.5 0.15 0.5 10 0.5 0.3 0.5 0.32 0.5 0.18 0.5 0 0.5 0.9 0.5 0.9</code>
+                            <p class="translation">1 t_p + 1 t_p = x 。 solve x 。 x = 2 t_p → true 。 solve x 。 x = 2 → false 。 solve x 。 x = 2 l_p → false 。。 <span class="cn">1 t_p + 1 t_p = x 。 求解 x 。 x = 2 t_p → 正确 。 求解 x 。 x = 2 → 错误 。 求解 x 。 x = 2 l_p → 错误 。。</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="codebook-entry">
+                    <h4>Line-by-line Breakdown</h4>
+                    <div class="codebook-sequence">
+                        <div class="sequence-line">
+                            <code>1 0.5 0.3 0.5 0.31 0.5 0.11 0.5 1 0.5 0.3 0.5 0.31 0.5 0.15 0.5 0.01 0.5 0.9</code>
+                            <p class="translation">1 t_p + 1 t_p = x 。 — equation with units on both addends <span class="cn">陈述：1 t_p + 1 t_p = x 。 — 两个加数都带单位。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.51 0.5 0.01 0.5 0.9</code>
+                            <p class="translation">solve x 。 <span class="cn">求解 x 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.15 0.5 10 0.5 0.3 0.5 0.31 0.5 0.18 0.5 1 0.5 0.9</code>
+                            <p class="translation">x = 2 t_p → true 。 — value and unit both correct <span class="cn">x = 2 t_p → 正确 。 — 值和单位都对。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.51 0.5 0.01 0.5 0.9</code>
+                            <p class="translation">solve x 。 <span class="cn">求解 x 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.15 0.5 10 0.5 0.18 0.5 0 0.5 0.9</code>
+                            <p class="translation">x = 2 → false 。 — value correct, unit missing <span class="cn">x = 2 → 错误 。 — 值对，但漏了单位。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.51 0.5 0.01 0.5 0.9</code>
+                            <p class="translation">solve x 。 <span class="cn">求解 x 。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.01 0.5 0.15 0.5 10 0.5 0.3 0.5 0.32 0.5 0.18 0.5 0 0.5 0.9</code>
+                            <p class="translation">x = 2 l_p → false 。 — value correct, but unit swapped to Planck length (0.32) <span class="cn">x = 2 l_p → 错误 。 — 值对，但单位换成了普朗克长度（0.32）。</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.5 0.9</code>
+                            <p class="translation">。。 — scenario terminator <span class="cn">情景结束的双句号。</span></p>
+                        </div>
+                    </div>
+                    <div class="codebook-explanation">
+                        The three answer rows form a minimal-pair test of dimensional consistency. Together they teach
+                        the receiver that the codebook treats <code>2 t_p</code>, <code>2</code>, and <code>2 l_p</code>
+                        as three distinct objects, and that a correct solution must preserve <em>both</em> magnitude and
+                        the originating unit. This is the bridge that makes 0.51 useful in physics, not just arithmetic.
+                        <span class="cn">
+                            三条应答构成一个最小对照组，专门检验"量纲一致性"：
+                            <code>2 t_p</code>、<code>2</code>、<code>2 l_p</code> 被密码本视为三个完全不同的对象，
+                            合格的解必须同时保留数值与原单位。这正是把 0.51 从"算术求解"推进到"物理求解"的桥梁。
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Symbol Reference -->
+            <div class="codebook-section">
+                <h3>Symbol Reference</h3>
+                <p class="cn-subtitle">符号参考</p>
+                <div class="constants-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-top: 24px;">
+                    <div class="constant-summary-card" style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="const-symbol" style="font-size: 24px; color: var(--aurora-purple); margin-bottom: 8px;">0.51</div>
+                        <h4 style="margin-bottom: 4px;">Solve / Query</h4>
+                        <p class="cn" style="color: var(--text-dim); font-size: 12px;">求解（疑问词，0.5x 系列首个公开成员）</p>
+                    </div>
+                    <div class="constant-summary-card" style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="const-symbol" style="font-size: 24px; color: var(--aurora-blue); margin-bottom: 8px;">0.01</div>
+                        <h4 style="margin-bottom: 4px;">Unknown (x)</h4>
+                        <p class="cn" style="color: var(--text-dim); font-size: 12px;">未知数</p>
+                    </div>
+                    <div class="constant-summary-card" style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="const-symbol" style="font-size: 24px; color: var(--aurora-blue); margin-bottom: 8px;">0.02</div>
+                        <h4 style="margin-bottom: 4px;">Subscript marker</h4>
+                        <p class="cn" style="color: var(--text-dim); font-size: 12px;">下划线角标</p>
+                    </div>
+                    <div class="constant-summary-card" style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="const-symbol" style="font-size: 24px; color: var(--aurora-green); margin-bottom: 8px;">0.18</div>
+                        <h4 style="margin-bottom: 4px;">Judgement (true/false)</h4>
+                        <p class="cn" style="color: var(--text-dim); font-size: 12px;">判断（0.18 1=正确；0.18 0=错误）</p>
+                    </div>
+                    <div class="constant-summary-card" style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="const-symbol" style="font-size: 24px; color: var(--aurora-green); margin-bottom: 8px;">0.9</div>
+                        <h4 style="margin-bottom: 4px;">Sentence terminator (。)</h4>
+                        <p class="cn" style="color: var(--text-dim); font-size: 12px;">句号；0.9 0.5 0.9 = 情景结束</p>
+                    </div>
+                    <div class="constant-summary-card" style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="const-symbol" style="font-size: 24px; color: var(--aurora-green); margin-bottom: 8px;">0.3</div>
+                        <h4 style="margin-bottom: 4px;">Unit marker</h4>
+                        <p class="cn" style="color: var(--text-dim); font-size: 12px;">单位前缀</p>
+                    </div>
+                    <div class="constant-summary-card" style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="const-symbol" style="font-size: 24px; color: var(--aurora-green); margin-bottom: 8px;">0.31</div>
+                        <h4 style="margin-bottom: 4px;">t_p (Planck time)</h4>
+                        <p class="cn" style="color: var(--text-dim); font-size: 12px;">普朗克秒</p>
+                    </div>
+                    <div class="constant-summary-card" style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="const-symbol" style="font-size: 24px; color: var(--aurora-green); margin-bottom: 8px;">0.32</div>
+                        <h4 style="margin-bottom: 4px;">l_p (Planck length)</h4>
+                        <p class="cn" style="color: var(--text-dim); font-size: 12px;">普朗克长度</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why -->
+            <div class="codebook-section">
+                <h3>Why 0.51 Matters</h3>
+                <p class="cn-subtitle">0.51 的意义</p>
+                <div class="codebook-explanation" style="margin-top: 16px;">
+                    With the four earlier families, the sender could only describe. With 0.51, the sender can pose a problem
+                    and let the receiver check the answer key — verified within the same transmission via 0.18 1 / 0.18 0.
+                    That single addition turns the codebook into a self-testable system: any civilization that decodes 0.51
+                    correctly can re-derive every example, and any mis-decoding shows up immediately as inconsistent verdicts.
+                    The reserved slots 0.52, 0.53, … will extend this from "solve" to other question types as the design grows.
+                    <span class="cn" style="display: block; margin-top: 16px;">
+                        没有 0.51 之前，发送者只能"描述"。加入 0.51 后，发送者能给出问题并把"参考答案"附在同一条传输里，
+                        通过 0.18 1 / 0.18 0 完成自验证。仅此一处增量，整个密码本就升级为可自测系统：
+                        任何能正确解码 0.51 的文明都能复算我们给出的每个例题，
+                        而一旦解码错误，判定行立刻显示出矛盾。
+                        预留的 0.52、0.53… 将把"求解"扩展到其它疑问类型。
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="philosophy" style="padding: 80px 0;">
+        <div class="container">
+            <div class="philosophy-quote" style="max-width: 800px; margin: 0 auto;">
+                <blockquote style="font-size: 24px;">
+                    "If I had an hour to solve a problem I'd spend 55 minutes thinking about the problem
+                    and 5 minutes thinking about solutions."
+                </blockquote>
+                <cite>— Adapted from Albert Einstein</cite>
+                <p class="quote-reflection">
+                    Before 0.51, every codebook entry was a finished sentence. After 0.51, the codebook contains
+                    questions — open invitations to think. That asymmetry between asking and answering is, perhaps,
+                    the deepest feature of intelligence we share with anyone listening.
+                </p>
+                <p class="quote-reflection cn">
+                    引入 0.51 之前，密码本里每一条都是说完的句子；引入之后，密码本里出现了"问题"——
+                    一种邀请对方思考的开放姿态。提问与应答之间的不对称，
+                    也许是我们与远方的倾听者最深处的共通之处。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 To Infinite and Beyond. For humanity, for the cosmos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

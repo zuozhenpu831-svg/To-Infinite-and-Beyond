@@ -469,6 +469,93 @@
                     </div>
                 </div>
             </div>
+            <!-- Independent & Dependent Variables -->
+            <div class="codebook-section">
+                <h3>Independent & Dependent Variables</h3>
+                <p class="cn-subtitle">自变量与因变量</p>
+                <div class="codebook-entry">
+                    <h4>Teaching Variables & Assignment <span class="symbol-badge">0.101 = 自变量 | 0.102 = 因变量 | 0.15 0.15 = :=</span></h4>
+                    <p style="margin-bottom: 16px; padding: 12px; background: rgba(100,255,218,0.1); border-radius: 8px; color: var(--text-secondary);">
+                        <strong>Multi-concept Codebook:</strong> This codebook teaches independent variable (0.101), dependent variable (0.102), and assignment operator (:= expressed as 0.15 0.5 0.15) simultaneously.
+                        <span class="cn" style="display: block; margin-top: 8px; color: var(--text-dim);">
+                            <strong>多概念密码本：</strong>此密码本同时教授自变量(0.101)、因变量(0.102)和赋值运算符(:= 表示为 0.15 0.5 0.15)三个概念。
+                        </span>
+                    </p>
+                    <p style="margin-bottom: 16px; padding: 12px; background: rgba(100,255,218,0.1); border-radius: 8px; color: var(--text-secondary);">
+                        <strong>Prerequisite:</strong> Requires understanding of velocity (0.41), displacement (0.42), time (0.43), △ operator (0.19), and judgment (0.18).
+                        <span class="cn" style="display: block; margin-top: 8px; color: var(--text-dim);">
+                            <strong>前置条件：</strong>需要理解速度(0.41)、位移(0.42)、时间(0.43)、△算子(0.19)、判断(0.18)。
+                        </span>
+                    </p>
+                    <div class="codebook-sequence">
+                        <div class="sequence-line">
+                            <code>0.19 0.5 0.42 0.5 0.14 0.5 0.19 0.5 0.43 0.5 0.15 0.5 0.41 0.5 0.9</code>
+                            <p class="translation">△s ÷ △t = V <span class="cn">△s ÷ △t = V — 奠定有限差分物理基石</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.42 0.5 0.15 0.5 0.15 0.5 0.102 0.5 0.9</code>
+                            <p class="translation">s := Dependent Variable <span class="cn">s := 因变量 — 将位移 s 设定为因变量</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.43 0.5 0.15 0.5 0.15 0.5 0.101 0.5 0.9</code>
+                            <p class="translation">t := Independent Variable <span class="cn">t := 自变量 — 将时间 t 设定为自变量</span></p>
+                        </div>
+                        <div class="sequence-line highlight">
+                            <code>0.19 0.5 0.102 0.5 0.14 0.5 0.19 0.5 0.101 0.5 0.15 0.5 0.41 0.5 0.18 0.5 1 0.5 0.9</code>
+                            <p class="translation">△(Dependent) ÷ △(Independent) = V → True <span class="cn">△(因变量) ÷ △(自变量) = V → 真 — 命题成立</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.42 0.5 0.15 0.5 0.15 0.5 0.101 0.5 0.9</code>
+                            <p class="translation">s := Independent Variable (reversed) <span class="cn">s := 自变量 — 反转赋值</span></p>
+                        </div>
+                        <div class="sequence-line">
+                            <code>0.43 0.5 0.15 0.5 0.15 0.5 0.102 0.5 0.9</code>
+                            <p class="translation">t := Dependent Variable (reversed) <span class="cn">t := 因变量 — 反转赋值</span></p>
+                        </div>
+                        <div class="sequence-line highlight">
+                            <code>0.19 0.5 0.101 0.5 0.14 0.5 0.19 0.5 0.102 0.5 0.15 0.5 0.41 0.5 0.18 0.5 0 0.5 0.9 0.5 0.9</code>
+                            <p class="translation">△(Independent) ÷ △(Dependent) = V → False.. <span class="cn">△(自变量) ÷ △(因变量) = V → 假。。 — 命题不成立，双句号闭环</span></p>
+                        </div>
+                    </div>
+                    <div class="codebook-explanation">
+                        Through two contrasting variable assignments on the same physical formula △s/△t = v,
+                        the meaning of all three new symbols is uniquely determined.
+                        <strong>Forward assignment:</strong> s = dependent, t = independent → △(dependent)/△(independent) = velocity → True.
+                        <strong>Reversed assignment:</strong> s = independent, t = dependent → △(independent)/△(dependent) ≠ velocity → False.
+                        The receiver uniquely infers: 0.101 is the denominator position (independent variable),
+                        0.102 is the numerator position (dependent variable), and 0.15 0.15 is the assignment operator.
+                        <span class="cn" style="display: block; margin-top: 12px;">
+                            通过同一物理公式 △s/△t = v 的两次变量赋值对比，唯一确定三个符号的含义。
+                            <strong>正向赋值：</strong>s = 因变量、t = 自变量 → △(因变量)/△(自变量) = 速度 → True。
+                            <strong>反转赋值：</strong>s = 自变量、t = 因变量 → △(自变量)/△(因变量) ≠ 速度 → False。
+                            接收者由此唯一推断：0.101 在分母位置（自变量），0.102 在分子位置（因变量），0.15 0.15 是赋值操作。
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculus Operators -->
+            <div class="codebook-section">
+                <h3>Calculus Operators</h3>
+                <p class="cn-subtitle">微积分运算符</p>
+                <div class="codebook-entry">
+                    <h4>△ and → <span class="symbol-badge">0.19 = △ | 0.191 = →</span></h4>
+                    <div class="codebook-explanation">
+                        <strong>0.19 △ (Delta)</strong> — Finite difference / change. Used as a prefix: △X means "change in X", △t means "change in time".
+                        <br>
+                        <strong>0.191 → (Approaches)</strong> — Limit operator. △→0 means "as the change approaches zero", bridging finite differences to calculus (dX/dt).
+                        <span class="cn" style="display: block; margin-top: 12px;">
+                            <strong>0.19 △</strong> — 有限差分/变化量。作为前缀使用：△X 表示"X的变化量"，△t 表示"时间的变化量"。
+                            <br>
+                            <strong>0.191 →</strong> — 极限运算符。△→0 表示"当变化量趋近于零"，将有限差分与微积分（dX/dt）连接起来。
+                        </span>
+                    </div>
+                </div>
+                <a href="codebook-quantities.html" class="coord-link" style="margin-top: 24px;">
+                    See these operators in action: Physical Quantities Codebook →
+                    <span class="cn">查看这些运算符的实际应用：物理量密码本</span>
+                </a>
+            </div>
         </div>
     </section>
 

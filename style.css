@@ -35,7 +35,7 @@
     --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
     --font-mono: 'Space Mono', 'Courier New', monospace;
-    --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-sans: 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 html {
@@ -1422,6 +1422,16 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 1180px) {
+    .dictionary-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .codebook-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
     .vision-content {
         grid-template-columns: 1fr;
@@ -1437,11 +1447,11 @@ section {
     }
 
     .dictionary-links {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .codebook-links {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -1562,11 +1572,11 @@ section {
     }
 
     .dictionary-links {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .codebook-links {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1693,8 +1703,8 @@ section {
 /* Dictionary Section - Card Links */
 .dictionary-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
 }
 
 .dictionary-card {
@@ -1869,8 +1879,8 @@ section {
 /* Codebook Links */
 .codebook-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
 }
 
 .codebook-card {
@@ -3315,17 +3325,17 @@ section {
         gap: 20px !important;
     }
 
-    /* Dictionary section 三个卡片垂直排列 */
+    /* Dictionary section 平板 2 列 */
     .dictionary-links {
         display: grid !important;
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 20px !important;
     }
 
-    /* Codebook section 三个卡片垂直排列 */
+    /* Codebook section 平板 2 列 */
     .codebook-links {
         display: grid !important;
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 20px !important;
     }
 
